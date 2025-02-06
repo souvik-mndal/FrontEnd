@@ -18,8 +18,21 @@ html,body{
 #outer{
     width: 45%;
     height: 55%;
-    background-color: aqua;
     border-radius: 30px;
     display: grid;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 45% 55%;
+    overflow: hidden;
+}
+#part1{
+    background-image: url(source/mug.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#part2{
+    background-color: white;
+    padding: 7% 8%;
+}
+#one{
+    font-family: montserrat;
+    font-weight: 500;
 }
