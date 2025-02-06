@@ -59,7 +59,7 @@ html,body{
 }
 #f1{
     font-size: 2.2rem;
-    font-family: "Rochester", serif;
+    font-family: rochester;
     color: #3C8067;
     font-weight: 900;
 }
@@ -79,10 +79,14 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 15px;
+}
+#five i{
+    color: white;
 }
 #five p{
     font-size: 1.1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: roboto;
     font-weight: 500;
     color: white;
 }
