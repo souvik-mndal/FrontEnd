@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: roboto;
 }
 html,body{
     width: 100%;
@@ -11,14 +11,58 @@ html,body{
 #wrapper{
     height: 100%;
     width: 100%;
+    padding-top: 20px;
 }
 h1{
     text-align: center;
     margin: 20px 0;
+    font-size: 3rem;
 }
 #gallery{
     max-width: 1200px;
     height: 100%;
     background-color: beige;
     margin:auto;
+}
+.outer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.inner{
+    width: 32%;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.caption{
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+    font-size: 1.2rem;
+    display: none;
+    color: white;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+}
+.inner:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+    filter: drop-shadow(0 0 10px #333);
+}
+.inner:hover img{
+    filter: grayscale(0%);
+}
+.inner:hover p{
+    display: inherit;
 }
