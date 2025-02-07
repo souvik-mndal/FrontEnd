@@ -12,3 +12,13 @@ html,body{
     height: 100%;
     width: 100%;
 }
+h1{
+    text-align: center;
+    margin: 20px 0;
+}
+#gallery{
+    max-width: 1200px;
+    height: 100%;
+    background-color: beige;
+    margin:auto;
+}
