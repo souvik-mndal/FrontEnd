@@ -43,9 +43,10 @@ h1{
     position: absolute;
     bottom: 4%;
     left: 4%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: none;
     color: white;
+    font-weight: 500;
 }
 img{
     width: 100%;
@@ -62,6 +63,7 @@ img{
 .inner:hover img{
     filter: grayscale(0%);
 }
-.inner:hover p{
+.inner:hover .caption{
     display: inherit;
+    transform: scale(1.03);
 }
