@@ -27,7 +27,7 @@ html,body{
     overflow: hidden;
 }
 p{
-    z-index: 2;
+    z-index: 1;
     position: relative;
 }
 .button::after{
