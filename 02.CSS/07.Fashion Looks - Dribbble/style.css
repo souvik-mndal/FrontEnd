@@ -23,11 +23,18 @@ html , body{
 #part-1{
     background-color: rgb(56, 148, 228);
     display: flex;
+    justify-content: space-between;
+    align-items: start;
 }
 #part-1 #logo{
-    width: .5rem;
-    height: .5rem;
+    width: 1rem;
+    height: 1rem;
     background-color: black;
+    transform: translateX(4px) rotate(45deg) ;
+}
+#part-1 #menu h2{
+    font-size: 1rem;
+    font-weight: 500;
 }
 #part-2{
     background-color: brown;
