@@ -26,6 +26,10 @@ html,body{
     position: relative;
     overflow: hidden;
 }
+p{
+    z-index: 2;
+    position: relative;
+}
 .button::after{
     content: "";
     position: absolute;
@@ -41,5 +45,7 @@ html,body{
 .button:hover::after{
     bottom: 0;
     border-radius: 0;
+}
+.button:hover p{
     color: white;
 }
