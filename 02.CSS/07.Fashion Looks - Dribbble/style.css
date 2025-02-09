@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+}
+#info{
+    padding: 2rem 1.5rem 2rem 2rem;
+    background-color: red;
+    display: grid;
+    grid-template-rows: 10% 25% 50% 15%;
+}
+#part-1{
+    background-color: rgb(56, 148, 228);
+    display: flex;
+}
+#part-1 #logo{
+    width: .5rem;
+    height: .5rem;
+    background-color: black;
+}
+#part-2{
+    background-color: brown;
+}
+#part-3{
+    background-color: beige;
+}
+#part-4{
+    background-color: blueviolet;
+}
+#vid{
+    padding: 2rem 2rem 2rem 1.5rem;
+    background-color: green;
+}
+#search{
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: blue;
+}
