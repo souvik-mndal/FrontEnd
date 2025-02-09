@@ -22,11 +22,9 @@ html,body{
     display: inline-block;
     padding: 2rem 4rem;
     border-radius: 5rem;
-    position: relative;
-    
-}
-p{
     font-size: 5rem;
+    position: relative;
+    transition: all .8s linear 0s;
 }
 .button::after{
     content: "";
@@ -37,9 +35,8 @@ p{
     left: 0;
     bottom: -100%;  
     border-radius: 50%;
-    transition: all .3s ease 0s;
 }
 .button:hover::after{
     top: 0;
-    border-radius: 0;
+    
 }
