@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: Roboto;
 }
 html,body{
     height: 100%;
@@ -16,7 +16,47 @@ html,body{
 #left{
     height: 100%;
     width: 50%;
+    padding-top: 10%;
+    padding-left: 5%;
     background-color: rgb(67, 67, 137);
+}
+#lleft{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(206, 177, 14);
+}
+#lleft-1 h1{
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 1;
+}
+#lleft-2 #color{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30px;
+    border-radius: 50px;
+    width: 15%;
+    border: 2px solid rgba(0, 0, 0, 0.536);
+}
+#lleft-2 #color h5{
+    font-weight: 400;
+}
+#lleft-2 #color .colr{
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+#lleft-2 #color #colour{
+    display: flex;
+    gap: 5px;
+} 
+#lleft-2 #color #colour  #color1{
+    background-color: #756952;
+}
+#lleft-2 #color #colour  #color2{
+    background-color: #333333;
 }
 #right{
     height: 100%;
