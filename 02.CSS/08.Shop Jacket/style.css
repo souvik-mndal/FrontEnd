@@ -12,3 +12,25 @@ html,body{
     height: 100%;
     width: 100%;
 }
+#nav{
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 3%;
+    gap: 2%;
+    background-color: aqua;
+}
+#nav div h3{
+    font-weight: 500;
+    font-size: 1rem;
+}
+#nav div:nth-child(4){
+    padding: 11px;
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+}
+#nav div i{
+    font-size: 1rem;
+}
