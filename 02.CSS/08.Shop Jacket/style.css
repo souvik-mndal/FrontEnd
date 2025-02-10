@@ -86,6 +86,8 @@ html,body{
     border-top: 2px solid black;
 }
 #image{
-    height: 30vh;
-    background-color: black;
+    height: calc(100% - 28vh - 32vh - 10vh);
+    background-image: url(source/image.png);
+    background-position: 0% 47%;
+    background-size: cover;
 }
