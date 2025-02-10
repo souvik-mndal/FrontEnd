@@ -18,17 +18,29 @@ html,body{
     width: 50%;
     padding-top: 10%;
     padding-left: 5%;
-    background-color: rgb(67, 67, 137);
+    padding-bottom: 3%;
+    /* background-color: rgb(67, 67, 137); */
+    
 }
 #lleft{
     height: 100%;
     width: 100%;
-    background-color: rgb(206, 177, 14);
+    /* background-color: rgb(206, 177, 14); */
+    position: relative;
 }
 #lleft-1 h1{
     font-size: 7rem;
     font-weight: 400;
     line-height: 1;
+}
+#lleft-2{
+    /* background-color: aqua; */
+    position: absolute;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 0;
 }
 #lleft-2 #color{
     display: flex;
@@ -36,7 +48,7 @@ html,body{
     align-items: center;
     height: 30px;
     border-radius: 50px;
-    width: 15%;
+    width: 30%;
     border: 2px solid rgba(0, 0, 0, 0.536);
 }
 #lleft-2 #color h5{
@@ -57,6 +69,14 @@ html,body{
 }
 #lleft-2 #color #colour  #color2{
     background-color: #333333;
+}
+#lleft-2 #details h4{
+    font-size: 1.35rem;
+}
+#lleft-2 #details p{
+    font-size: .95rem;
+    font-weight: 400;
+    line-height: 1.5;
 }
 #right{
     height: 100%;
