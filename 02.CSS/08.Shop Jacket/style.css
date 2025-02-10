@@ -13,7 +13,7 @@ html,body{
     width: 100%;
 }
 #nav{
-    height: 80px;
+    height: 10vh;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -23,14 +23,34 @@ html,body{
 }
 #nav div h3{
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1vw;
 }
 #nav div:nth-child(4){
-    padding: 11px;
+    padding: .8vw;
     background-color: black;
     color: #fff;
     border-radius: 50%;
 }
 #nav div i{
-    font-size: 1rem;
+    font-size: 1.2vw;
+}
+#head-ing{
+    font-family: Helvetica, sans-serif;
+    padding-left: 5vw;
+    padding-top: 2vh;
+    background-color: blue;
+    height: 32vh;
+}
+#head-ing h1{
+    font-size: 4vw;
+    font-weight: 500;
+}
+#part{
+    height: 28vh;
+    background-color: brown;
+}
+#image{
+    height: calc(100%-80px-32vh-30vh);
+    width: 100%;
+    background-color: black;
 }
