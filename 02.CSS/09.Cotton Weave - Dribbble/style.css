@@ -12,6 +12,7 @@ html,body{
     height: 100%;
     width: 100%;
     display: flex;
+    overflow-y: hidden;
 }
 #left{
     height: 100%;
@@ -114,12 +115,20 @@ html,body{
     align-items: center;
     gap: 10px;
 }
+#rright #rate #star{
+    /* background-color: #333333; */
+    display: flex;
+}
 #rright #rate p{
     font-size: .7rem;
     font-weight: 700;
+    /* background-color: rgb(231, 228, 228); */
+
 }
 #rright #rate i{
     font-size: .9rem;
+    /* background-color: rgb(151, 12, 231); */
+
 }
 #rright #image{
     /* background-color: red; */
