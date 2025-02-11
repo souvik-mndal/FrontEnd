@@ -26,7 +26,9 @@ html,body{
     height: 100%;
     width: 100%;
     /* background-color: rgb(206, 177, 14); */
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #lleft-1 h1{
     font-size: 7rem;
@@ -35,7 +37,6 @@ html,body{
 }
 #lleft-2{
     /* background-color: aqua; */
-    position: absolute;
     height: 30%;
     display: flex;
     flex-direction: column;
@@ -48,7 +49,7 @@ html,body{
     align-items: center;
     height: 30px;
     border-radius: 50px;
-    width: 30%;
+    width: 17%;
     border: 2px solid rgba(0, 0, 0, 0.536);
 }
 #lleft-2 #color h5{
@@ -81,5 +82,11 @@ html,body{
 #right{
     height: 100%;
     width: 50%;
+    padding-top: 13%;
     background-color: rgb(155, 104, 202);
+}
+#rright{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(127, 204, 154);
 }
