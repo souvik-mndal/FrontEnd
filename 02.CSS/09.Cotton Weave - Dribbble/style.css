@@ -83,10 +83,78 @@ html,body{
     height: 100%;
     width: 50%;
     padding-top: 13%;
-    background-color: rgb(155, 104, 202);
+    padding-right: 20%;
+    /* background-color: rgb(155, 104, 202); */
 }
 #rright{
     height: 100%;
     width: 100%;
-    background-color: rgb(127, 204, 154);
+    position: relative;
+    /* background-color: rgb(127, 204, 154); */
+}
+#rright #price{
+    display: flex;
+    align-items: center;
+    height: 13%;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    
+}
+#rright #price #total{
+    font-size: 1.5rem;
+    font-size: Roboto;
+    font-weight: 500;
+}
+#rright #rate{
+    display: flex;
+    width: 30%;
+    height: 60%;
+    /* background-color: red; */
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+#rright #rate p{
+    font-size: .7rem;
+    font-weight: 700;
+}
+#rright #rate i{
+    font-size: .9rem;
+}
+#rright #image{
+    /* background-color: red; */
+    width: 100%;
+    height: calc(100% - 13%);
+}
+#rright #image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 100%;
+}
+#add{
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    position: absolute;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -15%;
+    top: 28%;
+}
+#add p{
+    font-size: 1.3rem;
+}
+#desc{
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    left: -15%;
+    bottom: 3%;
+}
+#desc h2{
+    font-size: 1.7rem;
 }
