@@ -184,4 +184,75 @@ html,body{
         font-weight: 500;
         font-size: 2.5vw;
     }
+    #content{
+        height: calc(100% - 80px - 60px);
+        width: 100%;
+        /* background-color: aquamarine; */
+    }
+    #text{
+        height: 45%;
+        width: 100%;
+        /* background-color: bisque; */
+    }
+    #image{
+        height: 55%;
+        width: 100%;
+        /* background-color: rgb(255, 140, 0); */
+    }
+    #image #image-cont{
+        height: 100%;
+        width: 100%;
+        /* background-color: aqua; */
+        overflow: hidden;
+    }
+    #image #image-cont img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    #text{
+        display: flex;
+        overflow-x: auto;
+    }
+    #text::-webkit-scrollbar{
+        background-color: transparent;
+        height: 6px;
+    }
+    #text::-webkit-scrollbar-thumb{
+        background-color: #E2795C;
+        cursor:grabbing;
+    }
+    .text-rep{
+        height: 100%;
+        width: 50%;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* background-color: aqua; */
+    }
+    .text-rep .text-part{
+        display: flex;
+        height: 15%;
+        width: 25%;
+        justify-content: space-between;
+        align-items: center;
+        
+        /* background-color: aqua; */
+    }
+    .text-rep .text-part #no p{
+        font-size: 1.35vw;
+        font-weight: 700;
+    }
+    .text-rep .text-part #topic p{
+        font-size: 1.1vw;
+        font-weight: 400;
+    }
+    .text-rep h1{
+        font-size: 7.1vw;
+        font-weight:300;
+        font-family:  Roboto;
+        padding-left: 15%;
+    }
 }
