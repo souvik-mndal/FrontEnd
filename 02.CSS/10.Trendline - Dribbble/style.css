@@ -83,7 +83,7 @@ html,body{
 }
 #text{
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 #text::-webkit-scrollbar{
     background-color: transparent;
@@ -125,4 +125,7 @@ html,body{
     font-weight:300;
     font-family:  Roboto;
     padding-left: 15%;
+}
+@media(max-width:480px){
+    
 }
