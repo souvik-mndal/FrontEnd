@@ -132,7 +132,10 @@ html,body{
 }
 #video-content #video-desc #part-2{
     /* background-color: aqua; */
-    padding-top: 2%;
+    /* padding-top: 2%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #video-content #video-desc #part-2 p{
     color: white;
