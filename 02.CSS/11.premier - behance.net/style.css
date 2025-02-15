@@ -107,6 +107,7 @@ html,body{
     height: 50%;
     width: 100%;
     /* background-color: rebeccapurple; */
+    backdrop-filter: blur(4px);
 }
 #video-content #video-desc #part-1{
     display: flex;
