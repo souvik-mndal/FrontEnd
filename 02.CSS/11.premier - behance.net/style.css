@@ -10,5 +10,14 @@ html,body{
 #wrapper{
     height: 100%;
     width: 100%;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
+    padding-top: 0.1px;
+}
+#nav-bar{
+    height: 9.5vh;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 25px;
+    border-top: 2px solid black ;
+    border-bottom: 2px solid black ;
 }
