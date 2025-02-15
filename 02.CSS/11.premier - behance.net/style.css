@@ -17,7 +17,7 @@ html,body{
     padding-top: 0.1px;
 }
 #nav-bar{
-    height: 9.5vh;
+    height: 11vh;
     width: 100%;
     /* background-color: red; */
     margin-top: 25px;
@@ -28,15 +28,74 @@ html,body{
     justify-items: center;
     align-items: center;
 }
+#nav-bar h1{
+    font-family: monument;
+    font-size: 2.4vw;
+    font-weight: 900;
+    letter-spacing: -3px;
+    /* background-color: blue; */
+    position: relative;
+}
+#nav-bar h1::after{
+    content: "©";
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
+    font-weight: 300;
+    right: -8.5%;
+    top: 0;
+}
+#nav-bar h1::before{
+    content: "model management";
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .73vw;
+    letter-spacing: 0;
+    font-weight: 400;
+    right: 0%;
+    bottom: -5%;
+}
 #nav-bar h3{
     /* border: 2px solid black; */
-    font-size: 1.25vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35vw;
     font-weight: 600;
+    /* background-color: rgb(84, 136, 181); */
+}
+#nav-bar h3:nth-last-child(1){
+    padding-right: 40%;
+}
+#nav-bar .nav-ele-border{
+    border-left: 2px solid black;
 }
 #nav-bar h3 i{
-    font-size: 1.4vw;
+    font-size: 1.45vw;
     font-weight: 600;
 }
 #nav-bar h3 a:hover{
     text-decoration: underline;
+}
+#nav-bar h3 i:hover{
+    cursor: pointer;
+}
+#video-content{
+    width: 100%;
+    height: calc( 100vh - 11vh - 25px );
+    /* background-color: rgb(222, 144, 144); */
+    padding: 3% 5.7%;
+}
+#video-content #main-part{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(99, 99, 212); */
+    position: relative;
+}
+#video-content #main-part video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
