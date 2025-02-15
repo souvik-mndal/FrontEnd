@@ -87,6 +87,7 @@ html,body{
     height: calc( 100vh - 11vh - 25px );
     /* background-color: rgb(222, 144, 144); */
     padding: 3% 5.7%;
+    
 }
 #video-content #main-part{
     height: 100%;
@@ -98,4 +99,42 @@ html,body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+#video-content #video-desc{
+    position: absolute;
+    bottom: 0;
+    padding: 1% 4%;
+    height: 50%;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+}
+#video-content #video-desc #part-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 2px solid white;
+    padding-bottom: 2%;
+}
+#video-content #video-desc #part-1 h1{
+    font-size: 4vw;
+    font-family: monument;
+    line-height: 1.1;
+    font-weight: 600;
+    color: white;
+}
+#video-content #video-desc #part-1 p{
+    color: white;
+    font-size: 1.2vw;
+    padding: 2.1% 2.1%;
+    border: 3px solid rgba(255, 255, 255, 0.371);
+    border-radius: 50%;
+    border-bottom: 3px solid white;
+}
+#video-content #video-desc #part-2{
+    /* background-color: aqua; */
+    padding-top: 2%;
+}
+#video-content #video-desc #part-2 p{
+    color: white;
+    font-size: 1.2vw;
 }
