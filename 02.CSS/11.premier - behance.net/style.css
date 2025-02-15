@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
 }
 html,body{
     height: 100%;
@@ -20,4 +23,10 @@ html,body{
     margin-top: 25px;
     border-top: 2px solid black ;
     border-bottom: 2px solid black ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#nav-bar h3 a:hover{
+    text-decoration: underline;
 }
