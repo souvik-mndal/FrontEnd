@@ -107,7 +107,7 @@ html,body{
     height: 50%;
     width: 100%;
     /* background-color: rebeccapurple; */
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
 }
 #video-content #video-desc #part-1{
     display: flex;
@@ -148,6 +148,7 @@ html,body{
     display: flex;
     overflow: hidden;
     /* border-bottom: 2px solid black; */
+    margin-bottom: 3%;
 }
 #image-scroll #img-container{
     width: 140%;
@@ -192,4 +193,54 @@ html,body{
     to{
         transform : translateX(-100%);
     }
+}
+#alphabets{
+    background-color: rgb(205, 161, 103);
+    display: flex;
+    height: 11vh;
+    justify-content: center;
+}
+#alphabets #alpha-cont{
+    display: flex;
+    background-color: rgb(124, 176, 222);
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: calc(100% - 5.7% - 5.7%);
+    
+}
+#alphabets #alpha-cont #part-1{
+    /* background-color: cadetblue; */
+} 
+#alphabets #alpha-cont #part-2{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    /* background-color: rebeccapurple; */
+}
+#alphabets #alpha-cont #part-2 .letter-cont{
+    height: 2.8vw;
+    width: 2.8vw;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#alphabets #alpha-cont #part-2 .letter-cont:hover{
+    border: 2px solid rgba(0, 0, 0, 0.707);
+}
+#alphabets #alpha-cont h5{
+    font-size: 1.8vw;
+    font-style: italic;
+    font-weight: 500;
+}
+#alphabets #alpha-cont h6{
+    font-size: 1.22vw;
+    font-style: italic;
+    font-weight: 500;
+    /* background-color: yellow; */
 }
