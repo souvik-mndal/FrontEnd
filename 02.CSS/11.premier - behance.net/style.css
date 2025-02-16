@@ -446,6 +446,20 @@ html,body{
     justify-content: space-between;
     align-items: center;
     padding: 0% 3%;
+    position: relative;
+}
+#update #update-cont #main-cont .box::after{
+    content: "";
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #2f2f2f;
+    opacity: 1;
+    transition: all .1s ease 0s;
+}
+#update #update-cont #main-cont .box:hover::after{
+    height: 100%;
 }
 #update #update-cont #main-cont .box:nth-last-child(1){
     border-bottom: 2px solid black;
@@ -453,22 +467,37 @@ html,body{
 #update #update-cont #main-cont .box #part1{
     /* background-color: red; */
     width: 7%;
+    position: relative;
+    z-index: 1;
 }
 #update #update-cont #main-cont .box #part1 p{
     font-size: 1.1vw;
     font-weight: 400;
+    
 }
 #update #update-cont #main-cont .box #part2{
     /* background-color: red; */
     width: 50%;
+    position: relative;
+    z-index: 1;
 }
 #update #update-cont #main-cont .box #part2 h2{
     font-size: 3.2vw;
     font-weight: 500;
+    
 }
 #update #update-cont #main-cont .box #part2 p{
     font-size: .9vw;
     font-weight: 400;
+}
+#update #update-cont #main-cont .box:hover p{
+    color: white;
+}
+#update #update-cont #main-cont .box:hover h2{
+    color: white;
+}
+#update #update-cont #main-cont .box:hover{
+    border-top-color: white;
 }
 #movie-shot{
     width: 100%;
@@ -778,3 +807,75 @@ html,body{
     object-fit: cover;
     object-position: 0% 40%;
 }
+#foot{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    background-color: aqua;
+    padding: 0% 5.7%;
+}
+
+/* #foot #box1{
+    background-color: rgba(146, 193, 146, 0.516);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 85%;
+    width: 37%;
+    padding-right: 10%;
+}
+#foot #box1 #first{
+    font-family: monument;
+    font-size: 2.4vw;
+    font-weight: 900;
+    letter-spacing: -3px;
+    background-color: blue; 
+    position: relative;
+}
+#foot #box1 #sec{
+    font-size: 1.4vw;
+}
+#foot #box1 #first::after{
+    content: "©";
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
+    font-weight: 300;
+    right: -8.5%;
+    top: 15%;
+}
+#foot #box1 #first::before{
+    content: "model management";
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .73vw;
+    letter-spacing: 0;
+    font-weight: 400;
+    right: 0%;
+    bottom: 15%;
+}
+#foot #box2{
+    height: 85%;
+    width: 26%;
+    background-color: rgba(146, 146, 193, 0.516);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+#foot #box2 h1{
+    font-size: 1.4vw;
+}
+#foot #box3{
+    height: 85%;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(14, 14, 27, 0.403);
+}
+#foot #box3 h1{
+    font-size: 1.4vw;
+    text-align: center;
+    padding: 5% 0%;
+} */
