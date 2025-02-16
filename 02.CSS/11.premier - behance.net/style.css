@@ -412,3 +412,61 @@ html,body{
     object-fit: cover;
     object-position: 0% 30%;
 }
+#update{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding: 3% 5.7% 0% 5.7%;
+    margin-top: 3%;
+}
+#update #update-cont{
+    height: 100%;
+    width: 100%;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#update #update-cont h1{
+    font-size: 3vw;
+    font-family: monument;
+    text-align: center;
+}
+#update #update-cont #main-cont{
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    /* background-color: rgb(201, 201, 217); */
+}
+#update #update-cont #main-cont .box{
+    /* background-color: rgb(37, 7, 66); */
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 3%;
+}
+#update #update-cont #main-cont .box:nth-last-child(1){
+    border-bottom: 2px solid black;
+}
+#update #update-cont #main-cont .box #part1{
+    /* background-color: red; */
+    width: 7%;
+}
+#update #update-cont #main-cont .box #part1 p{
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+#update #update-cont #main-cont .box #part2{
+    /* background-color: red; */
+    width: 50%;
+}
+#update #update-cont #main-cont .box #part2 h2{
+    font-size: 3.2vw;
+    font-weight: 500;
+}
+#update #update-cont #main-cont .box #part2 p{
+    font-size: .9vw;
+    font-weight: 400;
+}
