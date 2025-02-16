@@ -195,14 +195,16 @@ html,body{
     }
 }
 #alphabets{
-    background-color: rgb(205, 161, 103);
+    /* background-color: rgb(205, 161, 103); */
     display: flex;
     height: 11vh;
     justify-content: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 #alphabets #alpha-cont{
     display: flex;
-    background-color: rgb(124, 176, 222);
+    /* background-color: rgb(124, 176, 222); */
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -211,6 +213,7 @@ html,body{
 }
 #alphabets #alpha-cont #part-1{
     /* background-color: cadetblue; */
+    margin-left: 1%;
 } 
 #alphabets #alpha-cont #part-2{
     display: flex;
@@ -231,15 +234,18 @@ html,body{
     align-items: center;
 }
 #alphabets #alpha-cont #part-2 .letter-cont:hover{
-    border: 2px solid rgba(0, 0, 0, 0.707);
+    border: 2px solid rgba(0, 0, 0, 0.507);
+    transition: all 0.1s ease 0s;
+
 }
 #alphabets #alpha-cont h5{
     font-size: 1.8vw;
     font-style: italic;
     font-weight: 500;
+    text-decoration: underline;
 }
 #alphabets #alpha-cont h6{
-    font-size: 1.22vw;
+    font-size: 1.32vw;
     font-style: italic;
     font-weight: 500;
     /* background-color: yellow; */
