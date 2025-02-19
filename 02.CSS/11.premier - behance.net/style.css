@@ -1165,4 +1165,152 @@ html,body{
         line-height: 1.2;
         font-weight: 400;
     }
+    #showcase{
+        height: 75%;
+        width: 100%;
+        /* background-color: aqua; */
+        padding: 3% 3% ;
+    }
+    #showcase #showcase-cont{
+        height: 100%;
+        width: 100%;
+        /* background-color: rgb(179, 133, 100); */
+    }
+    #showcase #showcase-cont #top{
+        width: 100%;
+        height: 60%;
+        /* background-color: red; */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* padding-bottom: 3%; */
+        /* border: 2px solid black; */
+    }
+    #showcase #showcase-cont #top #left{
+        width: 35%;
+        height: 100%;
+        /* background-color: rgb(194, 222, 58); */
+    }
+    #showcase #showcase-cont #top #left #part1{
+        width: 100%;
+        height: 70%;
+        /* background-color: rgb(32, 185, 62); */
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    #showcase #showcase-cont #top #left #part1 img{
+        width: 100%;
+    }
+    #showcase #showcase-cont #top #left #part2{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: end;
+        /* background-color: rgb(216, 111, 188); */
+    }
+    #showcase #showcase-cont #top #left #part2 h3{
+        font-size: 1.9vw;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+    /* #showcase #showcase-cont #top #right{ */
+        /* width: 59%; */
+        /* height: 100%; */
+        /* background-color: rgb(61, 127, 207); */
+    /* } */
+    /* #showcase #showcase-cont #top #right img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0% 40%;
+    } */
+    /* #showcase #showcase-cont #bottom{ */
+        /* width: 100%; */
+        /* height: 40%; */
+        /* background-color: rgb(222, 183, 183); */
+    /* } */
+    /* #showcase #showcase-cont #bottom{ */
+        /* width: 100%; */
+        /* height: 40%; */
+        /* padding-top: 3%; */
+        /* background-color: red; */
+    /* } */
+    /* #showcase #showcase-cont #bottom img{ */
+        /* width: 100%; */
+        /* height: 100%; */
+        /* object-fit: cover; */
+        /* object-position: 0% 30%; */
+    /* } */
+    #update{
+        width: 100%;
+        height: 50%;
+        /* background-color: aqua; */
+        padding: 3% 3% 0% 3%;
+        margin-top: 2%;
+    }
+    #update #update-cont{
+        height: 100%;
+        width: 100%;
+        /* background-color: beige; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #update #update-cont h1{
+        font-size: 5.5vw;
+        /* font-family: monument; */
+        /* text-align: center; */
+    }
+    #update #update-cont #main-cont{
+        /* width: 100%; */
+        /* height: 85%; */
+        display: grid;
+        grid-template-rows: repeat(4,1fr);
+        /* background-color: rgb(201, 201, 217); */
+    }
+    #update #update-cont #main-cont .box{
+        /* background-color: rgb(37, 7, 66); */
+        border-top: 2px solid black;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        padding: 0% 3%;
+        position: relative;
+    }
+    
+    #update #update-cont #main-cont .box #part1{
+        /* background-color: red; */
+        width: 10%;
+        position: relative;
+        z-index: 1;
+    }
+    #update #update-cont #main-cont .box #part1 p{
+        font-size: 2vw;
+        font-weight: 400;
+        
+    }
+    #update #update-cont #main-cont .box #part2{
+        /* background-color: red; */
+        width: 50%;
+        position: relative;
+        z-index: 1;
+    }
+    #update #update-cont #main-cont .box #part2 h2{
+        font-size: 4.5vw;
+        font-weight: 500;
+        
+    }
+    #update #update-cont #main-cont .box #part2 p{
+        font-size: 1.7vw;
+        font-weight: 400;
+    }
+    #update #update-cont #main-cont .box:hover p{
+        color: white;
+    }
+    #update #update-cont #main-cont .box:hover h2{
+        color: white;
+    }
+    #update #update-cont #main-cont .box:hover{
+        border-top-color: white;
+    }
 }
