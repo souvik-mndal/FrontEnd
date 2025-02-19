@@ -35,6 +35,6 @@ A modern **Nike product card UI** featuring a **floating shoe effect** and sleek
 - **Custom Buttons & Pricing Styling** for an e-commerce feel.  
 
  📷 Preview  
-![Nike Product Card](./02.CSS/02.Product%20Card%20-%20Nike/source/nikeproductcard.png)  
+![Nike Product Card](./02.CSS/02.Product%20Card%20-%20Nike/source/image.png)  
 
 💻 **Built with**: `HTML` & `CSS`
