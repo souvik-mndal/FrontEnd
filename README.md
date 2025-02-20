@@ -23,7 +23,7 @@ Created a **parallax scrolling website** using HTML and CSS. While building this
 - **`background-attachment: fixed`**: Keeps the background image fixed while scrolling, creating a smooth parallax effect.  
 
 This project helped me understand **how to work in 3D space with CSS** and enhance user experience with immersive scrolling effects.  
-[![🎥 Watch Video]()](https://youtu.be/Z9pSyJH4a4E?si=_Ye48QumedoZGjyU)
+[![🎥 Watch Video](./02.CSS/01.Parallax%20Website/source/Untitled%20design.jpg)](https://youtu.be/Z9pSyJH4a4E?si=_Ye48QumedoZGjyU)
 
 
 ###  2. Product Card - Nike
