@@ -23,7 +23,8 @@ Created a **parallax scrolling website** using HTML and CSS. While building this
 - **`background-attachment: fixed`**: Keeps the background image fixed while scrolling, creating a smooth parallax effect.  
 
 This project helped me understand **how to work in 3D space with CSS** and enhance user experience with immersive scrolling effects.  
-[🎥 Watch Video](./02.CSS/01.Parallax%20Website/source/parallaxrec.mp4)
+[![🎥 Watch Video]()](https://youtu.be/Z9pSyJH4a4E?si=_Ye48QumedoZGjyU)
+
 
 ###  2. Product Card - Nike
 
@@ -53,5 +54,4 @@ A beautifully designed **Coffee Mug product card** with a soft and elegant look,
 📌 Preview  
 ![Coffee Mug Product Card](./02.CSS/03.Product%20Card%20-%20Coffee/source/image.png)  
 
-💡 **Tech Used:** `HTML` | `CSS`  
 
