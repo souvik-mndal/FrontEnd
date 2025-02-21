@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 html,body{
     height: 100%;
@@ -10,4 +12,186 @@ html,body{
 #wrapper{
     height: 100%;
     width: 100%;
+}
+#nav-bar{
+    height: 12vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgb(128, 199, 199); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 3%;
+}
+#nav-bar #part1{
+    width: 38%;
+    /* background-color: azure; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-bar #part1 img{
+    height: 3vh;
+}
+#nav-bar #part1 #part12{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
+}
+#nav-bar #part1 #part12 h4{
+    font-size: .95vw;
+    color: rgba(0, 0, 0, 0.795);
+}
+#nav-bar #part2 button{
+    padding: 1vw 1.4vw;
+    border: 2px solid black;
+}
+#nav-bar #part2 button p{
+    font-size: .95vw;
+    font-weight: 550;
+}
+#nav-bar #part2 #sign{
+    border: none;
+    padding: 1vw 1.1vw;
+}
+#nav-bar #part2 #sign p{
+    font-size: .92vw;
+}
+#nav-bar #part2 #login{
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 2vw;
+}
+#hero{
+    /* background-color: rgb(158, 221, 221); */
+    height: 60%;
+    padding: 2% 0% 2% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#hero h1{
+    font-family: "Source Serif 4";
+    text-align: center;
+    font-size: 4vw;
+    line-height: 1;
+    font-weight: 300;
+}
+#hero p{
+    font-size: 1.2vw;
+    text-align: center;
+}
+#hero #search{
+    background-color: #e1e1f043;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgba(255, 192, 203, 0.507);
+    width: 45%;
+    height: 7vh;
+    border-radius: 10vw;
+    overflow: hidden;
+}#hero #search:hover{
+    background-color: white;
+}
+#hero #search:hover input{
+    background-color: white;
+}
+#hero #search input{
+    border: none;
+    height: 100%;
+    width: 80%;
+    padding-left: 3%;
+    background-color: #c9c9dd19;
+}
+#hero #search input:focus{
+    outline: none;
+}
+#hero #search input::placeholder{
+    font-size: 1vw;
+
+}
+#hero #search h4{
+    font-size: 1vw;
+    font-weight: 550;
+}
+#hero #search #search-icon{
+    height: 2.3vw;
+    width: 2.3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #EC5E95;
+    color: white;
+}
+#hero #search #search-icon i{
+    font-size: 1.1vw;
+}
+#hero #most-searches{
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+    /* background-color: azure; */
+}
+#hero #most-searches h4{
+    font-size: 1vw;
+    /* color: rgba(0, 0, 0, 0.566); */
+    font-weight: 500;
+    padding: .8vw .9vw;
+    border-radius: 5vw;
+    border: 1px solid rgba(255, 192, 203, 0.607);
+
+    background-color: #c9c9dd19;
+}
+#hero #most-searches h4:hover{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.625);
+    cursor: pointer;
+}
+#filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: blanchedalmond; */
+}
+#filter h4{
+    font-size: .98vw;
+    font-weight: 530;
+    cursor: pointer;
+}
+#filter h4:hover{
+    color: rgba(0, 0, 0, 0.616);
+}
+#filter #part2{
+    display: flex;
+    width: 65%;
+    justify-content: space-around;
+}
+#filter .border{
+    /* background-color: red; */
+    padding: .8vw 1vw;
+    border-radius: 15px;
+}
+#filter .border h4{
+    font-weight: 500;
+}
+#cards{
+    min-height: 50vh;
+    width: 100%;
+    background-color: rgb(153, 110, 110);
+    padding: 0% 3vw;
+    display: flex;
+    /* gap: 2vw; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{
+    height: 240px;
+    width: 330px;
+    background-color: aqua;
+    border: 2px solid black;
 }
