@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Sulphur Point;
+    color: white;
 }
 html,body{
     height: 100%;
@@ -11,15 +12,21 @@ html,body{
 #wrapper{
     height: 100%;
     width: 100%;
+    background-color: rgb(26, 25, 25);
 }
 #nav-bar{
     height: 9vh;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2vw;
+}
+#nav-bar h3{
+    font-size: 1.2vw;
 }
 #nav-bar #part2{
     display: flex;
     justify-content: space-around;
+    gap: 3vw;
 }
