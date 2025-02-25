@@ -19,3 +19,8 @@ tl.from("#image img",{
     opacity:0,
     stagger:.4
 })
+tl.from("#foot",{
+    y:20,
+    duration:.7,
+    opacity:0
+})
