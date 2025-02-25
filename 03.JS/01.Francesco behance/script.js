@@ -12,3 +12,10 @@ tl.from("#intro h1",{
     opacity:0,
     stagger:.25
 })
+tl.from("#image img",{
+    x:"45%",
+    rotate:45,
+    duration:.8,
+    opacity:0,
+    stagger:.4
+})
