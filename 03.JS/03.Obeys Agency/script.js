@@ -44,13 +44,21 @@ var load = function(){
         display:"none"
     })
 }
-// load()
-// var cursormove = document.querySelector("#wrapper");
-// cursormove.addEventListener("mousemove",function(dets){
-//     // console.log(dets.x,dets.y);
-//     gsap.to("#cursor",{
-//         x:dets.x,
-//         y:dets.y
-//     })
-// })
-
+load()
+var movecrsr = function(){
+    var cursormove = document.querySelector("#wrapper");
+    cursormove.addEventListener("mousemove",function(dets){
+        // console.log(dets.x,dets.y);
+        gsap.to("#cursor",{
+            x:dets.x,
+            y:dets.y
+        })
+    })
+}
+movecrsr();
+var magnet = function(){
+   Shery.makeMagnet("#nav-bar #part1 #one ,#nav-bar #part3 h3" /* Element to target.*/, {
+    //Parameters are optional.
+    }); 
+}
+magnet();
