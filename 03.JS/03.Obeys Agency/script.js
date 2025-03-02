@@ -41,11 +41,15 @@ var load = function(){
         opacity:0,
         duration:.4
     })
+    loadertl.from("#page1",{
+        y:"100%",
+        duration:.55,
+        ease: "none",
+    })
+    loadertl.to("#loader",{
+        display:"none"
+    })
 }
-// load()
-loadertl.from("#page1",{
-    // y:"50%",
-    opacity:0,
-    delay:0.5,
-    duration:.5
-})
+load()
+var page1 = gsap.timeline();
+
