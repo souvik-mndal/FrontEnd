@@ -17,6 +17,24 @@ html, body {
     z-index: 2;
     padding: 25vh 0 0 10vw;
 }
+#loader .line{
+    /* background-color: red; */
+    overflow: hidden;
+}
+#loader .line:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+#line1-part1{
+    display: flex;
+    gap: 2vw;
+}
+#line1-part1 h3{
+    font-size: 4.1vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+}
 #loader .line h1{
     font-size: 6.4vw;
     text-transform: uppercase;
