@@ -25,15 +25,9 @@ var load = function(){
             },23)
         }
     },"-=1")
-    loadertl.to(".line span",{
-        fontFamily:'Times New Roman',
-        fontStyle: "italic",
-        webkitTextStroke: "1.7px white",
-        color: "transparent"
-    })
     loadertl.to("#loader .line",{
         opacity:0,
-        duration:1,
+        duration:1.2,
         delay:1,
         stagger:0.2
     })

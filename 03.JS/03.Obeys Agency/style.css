@@ -52,24 +52,30 @@ html, body {
     line-height: 1;
 }
 #loader .line h1 span{
-    /* font-family:'Times New Roman', Times, serif;
-        font-style: italic;
-        -webkit-text-stroke: 1.7px white;
-        color: transparent; */
+    animation-name: spanchange;
+    animation-duration: .7s;
+    animation-delay: 3;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
     margin-left: 3.7vw;
 }
-/* @keyframes spanchange {
-    from{
-
+@keyframes spanchange {
+    0%{
+        font-family: Roboto;
+        opacity: 1;
     }
-    to{
+    50%{
         opacity: 0;
+    }
+    100%{
         font-family:'Times New Roman', Times, serif;
         font-style: italic;
         -webkit-text-stroke: 1.7px white;
         color: transparent;
+        opacity: 1;
     }
-} */
+}
 #wrapper{
     background-color: #000000;
 }
