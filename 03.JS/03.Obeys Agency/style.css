@@ -10,7 +10,7 @@ html, body {
     width: 100%;
 }
 #loader{
-    /* opacity: 0; */
+    display: none;
     height: 100vh;
     width: 100vw;
     background-color: #0d0d0d;
@@ -79,8 +79,48 @@ html, body {
 #wrapper{
     background-color: #000000;
 }
+#cursor{
+    width: 42px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.412);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1;
+}
 #page1,#page2,#page3{
     height: 100vh;
     /* border: 2px solid white; */
     background-color: #181717;
+}
+#page1 #nav-bar{
+    /* background-color: red; */
+    height: 16.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    padding: 0 5vw;
+    padding-top: 6.5vh;
+}
+#page1 #nav-bar h3{
+    font-size: 1.02vw;
+    font-weight: 400;
+}
+#page1 #nav-bar #part1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 9%;
+}
+#page1 #nav-bar #part1 h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page1 #nav-bar #part3{
+    display: flex;
+    /* background-color: blue; */
+    width: 55%;
+    justify-content: end;
+    gap: 2vw;
+}
 }

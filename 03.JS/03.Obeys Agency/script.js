@@ -44,6 +44,13 @@ var load = function(){
         display:"none"
     })
 }
-load()
-var page1 = gsap.timeline();
+// load()
+// var cursormove = document.querySelector("#wrapper");
+// cursormove.addEventListener("mousemove",function(dets){
+//     // console.log(dets.x,dets.y);
+//     gsap.to("#cursor",{
+//         x:dets.x,
+//         y:dets.y
+//     })
+// })
 
