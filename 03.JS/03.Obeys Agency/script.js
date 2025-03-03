@@ -39,6 +39,7 @@ var load = function(){
         y:"-100%",
         duration:.8,
         ease: "expo.out",
+        display:"none"
     })
     loadertl.to("#loader",{
         display:"none"
@@ -67,7 +68,47 @@ var magnet = function(){
     }); 
 }
 magnet();
-// var webgphs = document.querySelectorAll("#hero .cont h1 span")
-// webgphs.addEventListener("mouseenter",function(){
-//     webgphs.style.textDecoration="none"
-// })
+var vidcntl = function(){
+    var vidcont = document.querySelector("#videocont")
+    var vidcur = document.querySelector("#videocrsr")
+    var vidthumb = document.querySelector("#videocont img")
+    var vid = document.querySelector("#videocont video")
+    vidcont.addEventListener("mouseenter",function(){
+        var crsr = document.querySelector("#cursor")
+        crsr.style.zIndex=0
+    })
+    vidcont.addEventListener("mousemove",function(dets){
+        const rect = vidcont.getBoundingClientRect();
+        let relativeX = dets.clientX - rect.left;
+        let relativeY = dets.clientY - rect.top;
+        gsap.to("#videocrsr",{
+            left:relativeX,
+            top:relativeY
+        })
+    })
+    vidcont.addEventListener("mouseleave",function(){
+        var crsr = document.querySelector("#cursor")
+        crsr.style.zIndex=1
+        gsap.to("#videocrsr",{
+            left:"77%",
+            top:0
+        })
+    })
+    var clickcount=1;
+    vidcont.addEventListener("click",function(){
+        if(clickcount%2===0){
+            vid.pause();
+            vidthumb.style.opacity=1
+        }
+        else{
+            vidthumb.style.opacity=0
+            vid.autoplay = true; // Enables autoplay
+            vid.loop = true; // Loops the video
+            vid.muted = false;
+            vid.play();
+        }
+        clickcount++;
+        
+    })
+}
+vidcntl();

@@ -9,6 +9,10 @@ html, body {
     height: 100%;
     width: 100%;
 }
+body::-webkit-scrollbar{
+    display: none;
+    background-color: transparent;
+}
 #loader{
     /* display: none; */
     height: 100vh;
@@ -86,8 +90,8 @@ html, body {
     border: 2px solid rgba(234, 231, 231, 0.689);
     border-radius: 50%;
     position: fixed;
-    z-index: 1;
-    transform: translate(-50%,-50%);
+    z-index: 4;
+    /* transform: translate(-50%,-50%); */
     mix-blend-mode: difference;
 }
 #page0{
@@ -98,11 +102,18 @@ html, body {
     z-index: 3;
     /* display: none; */
 }
-#page1{
+#page1,#page2{
     height: 100vh;
+    /* width: 100vw; */
     position: relative;
     /* border: 2px solid white; */
     background-color: rgb(24, 23, 23);
+}
+#page1{
+    height: 92vh;
+}
+#page2{
+    padding-top: 1px;
 }
 /* rgb(24, 23, 23) */
 #page1 #nav-bar{
@@ -141,6 +152,8 @@ html, body {
 }
 #hero{
     position: relative;
+    /* background-color: pink; */
+    /* border: 2px solid white; */
 }
 #hero::before{
     content: "01";
@@ -162,7 +175,6 @@ html, body {
 }
 #hero .cont:nth-child(1){
     margin-top: 12.5vh;
-
 }
 #hero .cont h1{
     font-size: 7.5vw;
@@ -171,13 +183,51 @@ html, body {
     font-weight: 500;
 }
 #hero .cont h1 span{
-    /* background-color: red; */
+    /* background-color: rgb(192, 106, 106); */
     text-decoration: underline;
-    /* border-bottom: 1px solid white;
-    border-spacing: 2vw; */
+    /* border-bottom: 1px solid white; */
+    /* border-spacing: 2vw; */
+    transition: all ease 0.25s;
 }
 #hero .cont h1 span:hover{
     text-decoration: none;
     -webkit-text-stroke: 1px white;
     color: transparent;
+}
+#page2 #videocont{
+    height: 70vh;
+    width: 70.8vw;
+    margin-left: 28vw;
+    position: relative;
+    /* background-color: lavender; */
+    /* border: 2px solid white; */
+    margin-top: 2.5%;
+}
+#page2 #videocont img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+#page2 #videocont #videocrsr{
+    height: 10.2vw;
+    width: 10.2vw;
+    background-color: #FFA63D;
+    position: absolute;
+    border-radius: 50%;
+    z-index:3 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 77%;
+    top: 0;
+    transform: translate(-50%,-50%);
+}
+#page2 #videocont #videocrsr i{
+    font-size: 1.8vw;
+}
+#page2 #videocont video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
