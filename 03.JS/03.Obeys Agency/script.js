@@ -35,21 +35,21 @@ var load = function(){
         opacity:0,
         duration:.4
     })
-    // loadertl.from("#page1",{
-    //     y:"100%",
-    //     duration:.55,
-    //     ease: "none",
-    // })
+    loadertl.to("#page0",{
+        y:"-100%",
+        duration:.8,
+        ease: "expo.out",
+    })
     loadertl.to("#loader",{
         display:"none"
     })
     loadertl.from("#hero .cont h1",{
         y:100,
         opacity:0,
-        stagger:.15
-    })
+        stagger:.17
+    },"-=1.2")
 }
-load()
+// load()
 var movecrsr = function(){
     var cursormove = document.querySelector("#wrapper");
     cursormove.addEventListener("mousemove",function(dets){

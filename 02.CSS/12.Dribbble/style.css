@@ -8,6 +8,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
 }
 #wrapper{
     height: 100%;
@@ -77,7 +78,7 @@ html,body{
     font-family: "Source Serif 4";
     text-align: center;
     font-size: 4vw;
-    line-height: 1;
+    line-height: 1.15;
     font-weight: 300;
 }
 #hero p{
@@ -182,16 +183,65 @@ html,body{
 #cards{
     min-height: 50vh;
     width: 100%;
-    background-color: rgb(153, 110, 110);
-    padding: 0% 3vw;
+    /* background-color: rgb(153, 110, 110); */
+    padding: 0% 4vw;
     display: flex;
     /* gap: 2vw; */
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 2%;
 }
 .card{
-    height: 240px;
-    width: 330px;
+    height: 245px;
+    width: 320px;
+    /* background-color: aqua; */
+    /* border: 2px solid black; */
+    margin-bottom: 2vw;
+    border-radius: 15px;
+}
+.card .card-cont{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#continue{
+    height: 9.2vh;
+    /* background-color: aqua; */
+    margin-top: 1%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#continue h4{
+    background-color: black;
+    padding: 1vw 1.7vw ;
+    font-size: .87vw;
+    border-radius: 100px;
+}
+#continue #top{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+#continue #top i{
+    background-color: rgba(128, 128, 128, 0.73);
+    padding: .9vw;
+    border-radius: 50%;
+    font-size: 1.9vw;
+    font-weight: 100;
+    color: white;
+}
+#movement{
+    height: 28vh;
     background-color: aqua;
-    border: 2px solid black;
+    margin-top: 5.5%;
 }
