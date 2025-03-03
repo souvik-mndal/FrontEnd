@@ -49,7 +49,7 @@ var load = function(){
         stagger:.17
     },"-=1.2")
 }
-// load()
+load()
 var movecrsr = function(){
     var cursormove = document.querySelector("#wrapper");
     cursormove.addEventListener("mousemove",function(dets){
@@ -67,3 +67,7 @@ var magnet = function(){
     }); 
 }
 magnet();
+// var webgphs = document.querySelectorAll("#hero .cont h1 span")
+// webgphs.addEventListener("mouseenter",function(){
+//     webgphs.style.textDecoration="none"
+// })
