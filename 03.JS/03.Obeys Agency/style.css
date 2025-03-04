@@ -9,6 +9,9 @@ html, body {
     height: 100%;
     width: 100%;
 }
+body {
+    cursor: none; /* Hide the default cursor */
+}
 body::-webkit-scrollbar{
     display: none;
     background-color: transparent;
@@ -102,11 +105,11 @@ body::-webkit-scrollbar{
     z-index: 3;
     display: none;
 }
-#page1,#page2,#page3{
+#page1,#page2,#page3,#page4{
     height: 100vh;
     /* width: 100vw; */
     position: relative;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     background-color: rgb(24, 23, 23);
 }
 #page1{
@@ -114,6 +117,10 @@ body::-webkit-scrollbar{
 }
 #page2{
     padding-top: 1px;
+}
+#page3,#page4{
+    min-height: fit-content;
+    /* background-color: aqua; */
 }
 /* rgb(24, 23, 23) */
 #page1 #nav-bar{
@@ -206,17 +213,20 @@ body::-webkit-scrollbar{
 #page2 #videocont{
     height: 70vh;
     width: 70.8vw;
-    margin-left: 28vw;
+    margin-left: auto;
     position: relative;
     /* background-color: lavender; */
     /* border: 2px solid white; */
     margin-top: 7%;
+    display: flex;
+    align-items: center;
 }
 #page2 #videocont img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     position: absolute;
+    top: 0;
 }
 #page2 #videocont #videocrsr{
     height: 10.2vw;
@@ -242,4 +252,95 @@ body::-webkit-scrollbar{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+#page3 .heading{
+    position: relative;
+}
+#page4 .heading{
+    position: relative;
+}
+.heading .cont{
+    /* background-color: rgb(211, 171, 171); */
+    /* border: 1px solid white; */
+    width: 65%;
+    margin-left: 28.5%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    padding: 4vw 0;
+    border-bottom: 2px solid white;
+}
+.heading .cont h1{
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 500;
+}
+.heading#two::before{
+    content: "02";
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 26%;
+    left: 19%;
+    z-index: 2;
+}
+.heading#three::before{
+    content: "03";
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 26%;
+    left: 19%;
+    z-index: 2;
+}
+#page4 #about{
+    width: 70%;
+    margin-left: 28.5%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    padding: 2vw 0;
+    /* border: 2px solid white; */
+}
+#page4 #about #inside-abt{
+    width: 70vw;
+    height: 170vh;
+    border-bottom: 2px solid white;
+    display: flex;
+    position: relative;
+}
+#page4 #about h2{
+    width: 55%;
+    font-size: 2.6vw;
+    font-weight: 300;
+    line-height: 1.1;
+}
+#page4 #about #img1{
+    margin-top: 3.5vw;
+    height: 85vh;
+    width: 35vw;
+    flex-shrink: 0;
+}
+#page4 #about #img1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page4 #about #inside-abt h4{
+    width: 28%;
+    font-size: 1.1vw;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-left: 2.5vw;
+}
+#page4 #about #inside-abt #win{
+    height: 82vh;
+    width: 33vw;
+    background-color: #3F7DF4;
+    position: absolute;
+    top:40%;
+    left: 35%;
 }

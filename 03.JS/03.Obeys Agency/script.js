@@ -2,6 +2,11 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('#wrapper'),
     smooth: true
 });
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+});
 var load = function(){
     var loadertl = gsap.timeline()
     loadertl.from(".line h1 ",{
@@ -65,7 +70,7 @@ var movecrsr = function(){
         })
     })
 }
-movecrsr();
+// movecrsr();
 var magnet = function(){
    Shery.makeMagnet("#nav-bar #part1 #one ,#nav-bar #part3 h3" /* Element to target.*/, {
     //Parameters are optional.
