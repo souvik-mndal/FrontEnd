@@ -90,7 +90,7 @@ body::-webkit-scrollbar{
     border: 2px solid rgba(234, 231, 231, 0.689);
     border-radius: 50%;
     position: fixed;
-    z-index: 4;
+    z-index: 1;
     /* transform: translate(-50%,-50%); */
     mix-blend-mode: difference;
 }
@@ -172,6 +172,7 @@ body::-webkit-scrollbar{
     margin-left: 28.5%;
     overflow: hidden;
     position: relative;
+    z-index: 2;
 }
 #hero .cont:nth-child(1){
     margin-top: 12.5vh;
@@ -188,6 +189,14 @@ body::-webkit-scrollbar{
     /* border-bottom: 1px solid white; */
     /* border-spacing: 2vw; */
     transition: all ease 0.25s;
+    position: relative;
+}
+#hero .cont span .mask{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    /* z-index: 22; */
 }
 #hero .cont h1 span:hover{
     text-decoration: none;
