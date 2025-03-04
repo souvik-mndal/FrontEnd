@@ -14,7 +14,7 @@ body::-webkit-scrollbar{
     background-color: transparent;
 }
 #loader{
-    /* display: none; */
+    display: none;
     height: 100vh;
     width: 100vw;
     background-color: #0d0d0d;
@@ -100,13 +100,13 @@ body::-webkit-scrollbar{
     background-color: rgb(0, 0, 0);
     position: absolute;
     z-index: 3;
-    /* display: none; */
+    display: none;
 }
-#page1,#page2{
+#page1,#page2,#page3{
     height: 100vh;
     /* width: 100vw; */
     position: relative;
-    /* border: 2px solid white; */
+    border: 2px solid white;
     background-color: rgb(24, 23, 23);
 }
 #page1{
@@ -210,7 +210,7 @@ body::-webkit-scrollbar{
     position: relative;
     /* background-color: lavender; */
     /* border: 2px solid white; */
-    margin-top: 2.5%;
+    margin-top: 7%;
 }
 #page2 #videocont img{
     height: 100%;
@@ -234,6 +234,9 @@ body::-webkit-scrollbar{
 }
 #page2 #videocont #videocrsr i{
     font-size: 1.8vw;
+}
+#page2 #videocont #videocrsr #pause{
+    display: none;
 }
 #page2 #videocont video{
     height: 100%;

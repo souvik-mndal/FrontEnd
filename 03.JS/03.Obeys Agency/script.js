@@ -1,3 +1,7 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#wrapper'),
+    smooth: true
+});
 var load = function(){
     var loadertl = gsap.timeline()
     loadertl.from(".line h1 ",{
@@ -50,7 +54,7 @@ var load = function(){
         stagger:.17
     },"-=1.2")
 }
-load()
+// load()
 var movecrsr = function(){
     var cursormove = document.querySelector("#wrapper");
     cursormove.addEventListener("mousemove",function(dets){
@@ -73,6 +77,8 @@ var vidcntl = function(){
     var vidcur = document.querySelector("#videocrsr")
     var vidthumb = document.querySelector("#videocont img")
     var vid = document.querySelector("#videocont video")
+    var vidpause = document.querySelector("#videocont #pause")
+    var vidplay = document.querySelector("#videocont #play")
     vidcont.addEventListener("mouseenter",function(){
         var crsr = document.querySelector("#cursor")
         crsr.style.zIndex=0
@@ -98,10 +104,27 @@ var vidcntl = function(){
     vidcont.addEventListener("click",function(){
         if(clickcount%2===0){
             vid.pause();
+            
+            gsap.to("#videocrsr",{
+                height:"10.2vw",
+                width:"10.2vw",
+            })
+            vidpause.style.display="none"
+            vidplay.style.display="initial"
             vidthumb.style.opacity=1
         }
         else{
             vidthumb.style.opacity=0
+            gsap.to("#videocont #pause",{
+                fontSize:"1.2vw",
+                duration:.4
+            })
+            gsap.to("#videocrsr",{
+                height:"4.5vw",
+                width:"4.5vw",
+            })
+            vidpause.style.display="initial"
+            vidplay.style.display="none"
             vid.autoplay = true; // Enables autoplay
             vid.loop = true; // Loops the video
             vid.muted = false;
