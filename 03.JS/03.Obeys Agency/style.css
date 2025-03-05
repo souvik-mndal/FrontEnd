@@ -307,7 +307,7 @@ body::-webkit-scrollbar{
 }
 #page4 #about #inside-abt{
     width: 70vw;
-    height: 170vh;
+    height: 150vh;
     border-bottom: 2px solid white;
     display: flex;
     position: relative;
@@ -337,10 +337,29 @@ body::-webkit-scrollbar{
     margin-left: 2.5vw;
 }
 #page4 #about #inside-abt #win{
-    height: 82vh;
-    width: 33vw;
+    height: 70vh;
+    width: 34vw;
     background-color: #3F7DF4;
     position: absolute;
     top:40%;
     left: 35%;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    padding: 3.5vw 3vw ;
+}
+#page4 #about #inside-abt #win .parts{
+    /* background-color: rgb(61, 61, 137); */
+    border-bottom: 2px solid #ffffff76;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+#page4 #about #inside-abt #win .parts h2{
+    font-size: 1.5vw;
+    width: 55%;
+}
+#page4 #about #inside-abt #win .parts h3{
+    font-size: .95vw;
+    width: 45%;
+    font-weight: 400;
 }
