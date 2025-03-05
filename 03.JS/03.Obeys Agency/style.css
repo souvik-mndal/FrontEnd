@@ -105,7 +105,7 @@ body::-webkit-scrollbar{
     z-index: 3;
     display: none;
 }
-#page1,#page2,#page3,#page4{
+#page1,#page2,#page3,#page4,#page5{
     height: 100vh;
     /* width: 100vw; */
     position: relative;
@@ -362,4 +362,60 @@ body::-webkit-scrollbar{
     font-size: .95vw;
     width: 45%;
     font-weight: 400;
+}
+#page5{
+    padding-top: .1px;
+}
+#marque{
+    /* height: 60vh; */
+    /* background-color: rgba(255, 0, 0, 0.473); */
+    margin-top: 5vw;
+}
+#marque .mark{
+    /* border: 2px solid white; */
+    display: flex;
+    /* overflow-x: auto; */
+}
+#marque .mark h1{
+    font-size: 8vw;
+    /* border: 1px solid white; */
+    flex-shrink: 0;
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    
+}
+#marque .mark#mark1 h1,#marque .mark#mark3 h1{
+    animation-name: markmoverleft;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#marque .mark#mark2 h1,#marque .mark#mark4 h1{
+    transform: translateX(-100%);
+    animation-name: markmoverright;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes markmoverleft {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(calc(-100%));
+    }
+}
+@keyframes markmoverright {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(calc(0%));
+    }
+}
+#marque .mark h1 span{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
 }
