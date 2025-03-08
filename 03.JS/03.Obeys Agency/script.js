@@ -171,11 +171,15 @@ var vidcntl = function(){
 }
 vidcntl();
 document.addEventListener("DOMContentLoaded", function() {
-    let h2s = document.querySelectorAll("#page6 #foots #foot1 h2, #page6 #foots #foot3 h2"); 
+    let h2s = document.querySelectorAll(
+        "#page6 #foots #foot1 h2, #page6 #foots #foot3 h2, #page3 #imagecont .ic h2"
+    ); // Select h2s inside foot1, foot3, and imagecont.ic
+
     h2s.forEach(h2 => {
         h2.setAttribute("data-text", h2.textContent); // Set data-text for each h2
     });
 });
+
 function gooeyani(){
     Shery.imageEffect("#imagecont .imgcont",{
         style:5,
@@ -184,18 +188,80 @@ function gooeyani(){
     })
 }
 gooeyani()
-function imagecirc(){
-    var circ = document.querySelector("#page3 .circ ")
+function page_3_anni(){
+    var circ1 = document.querySelector("#page3 .circ.one ")
+    var circ2 = document.querySelector("#page3 .circ.two ")
+    var circ3 = document.querySelector("#page3 .circ.third ")
+    var circ4 = document.querySelector("#page3 #lastcirccont #circ")
     var circgobig = document.querySelector("#page3 .circ .goinbig")
-    circ.addEventListener("mouseenter",function(){
-        gsap.to("#page3 .circ .goinbig",{
-            
+    circ1.addEventListener("mouseenter",function(){
+        gsap.to("#page3 .circ.one .goinbig",{
+            scale:1
+        })
+        gsap.from("#page3 .circ.one .goinbig p",{
+            opacity:0,
+            delay:.5,
+            scale:.5,
+            duration:.45
         })
     })
-    circ.addEventListener("mouseleave",function(){
-        gsap.to("#page3 .circ .goinbig",{
-
+    circ1.addEventListener("mouseleave",function(){
+        gsap.to("#page3 .circ.one .goinbig",{
+            scale:0
+        })
+        gsap.to("#page3 .circ.one .goinbig p",{
+            opacity:1
+        })
+    })
+    circ2.addEventListener("mouseenter",function(){
+        gsap.to("#page3 .circ.two .goinbig",{
+            scale:1
+        })
+        gsap.from("#page3 .circ.two .goinbig p",{
+            opacity:0,
+            delay:.5,
+            scale:.5,
+            duration:.45
+        })
+    })
+    circ2.addEventListener("mouseleave",function(){
+        gsap.to("#page3 .circ.two .goinbig",{
+            scale:0
+        })
+        gsap.to("#page3 .circ.two .goinbig p",{
+            opacity:1
+        })
+    })
+    circ3.addEventListener("mouseenter",function(){
+        gsap.to("#page3 .circ.third .goinbig",{
+            scale:1
+        })
+        gsap.from("#page3 .circ.third .goinbig p",{
+            opacity:0,
+            delay:.5,
+            scale:.5,
+            duration:.45
+        })
+    })
+    circ3.addEventListener("mouseleave",function(){
+        gsap.to("#page3 .circ.third .goinbig",{
+            scale:0
+        })
+        gsap.to("#page3 .circ.third .goinbig p",{
+            opacity:1
+        })
+    })
+    circ4.addEventListener("mouseenter",function(){
+        gsap.to("#page3 #lastcirccont #circ",{
+            scale:.9,
+            duration:.4
+        })
+    })
+    circ4.addEventListener("mouseleave",function(){
+        gsap.to("#page3 #lastcirccont #circ",{
+            scale:1,
+            duration:.4
         })
     })
 }
-imagecirc()
+page_3_anni()
