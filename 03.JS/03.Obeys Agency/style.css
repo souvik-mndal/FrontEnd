@@ -17,7 +17,7 @@ body::-webkit-scrollbar{
     background-color: transparent;
 }
 #loader{
-    display: none;
+    /* display: none; */
     height: 100vh;
     width: 100vw;
     background-color: #0d0d0d;
@@ -103,7 +103,7 @@ body::-webkit-scrollbar{
     background-color: rgb(0, 0, 0);
     position: absolute;
     z-index: 3;
-    display: none;
+    /* display: none; */
 }
 #page1,#page2,#page3,#page4,#page5,#page6{
     height: 100vh;
@@ -255,6 +255,167 @@ body::-webkit-scrollbar{
 }
 #page3 .heading{
     position: relative;
+}
+#page3 #imagecont{
+    /* background-color: red; */
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#page3 #imagecont #box1{
+    display: flex;
+}
+#page3 #imagecont .ic{
+    /* background-color: lawngreen; */
+    width: 24vw;
+    margin-top: 6vw;
+    margin-right: 2.5vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+#page3 #imagecont .ic#img2{
+    /* background-color: lawngreen; */
+    width: 30vw;
+    /* margin-top: 6vw; */
+    /* margin-right: 2vw; */
+    height: 105vh;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-evenly; */
+    /* position: relative; */
+    /* border-bottom: 1px solid white; */
+}
+#page3 #imagecont .ic h2{
+    font-size: 2.8vw;
+}
+#page3 #imagecont .ic #part{
+    display: flex;
+    justify-content: space-between;
+}
+#page3 #imagecont .ic #part h4{
+    font-size: 1vw;
+    font-weight: 300;
+}
+#page3 #imagecont .ic #part #one{
+    width: 50%;
+}
+#page3 #imagecont .ic .imgcont{
+    height: 75%;
+    width: 100%;
+}
+#page3 #imagecont .ic#img2 .imgcont{
+    height: 80%;
+    width: 100%;
+}
+
+#page3 #imagecont .ic img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+#page3 #imagecont .circ#circle1{
+    justify-self: flex-end;
+    align-self: flex-end;
+    width: 23vw;
+    height: 23vw;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+#page3 #imagecont.imageconttwo .circ#circle1{
+    align-self: flex-start;
+    rotate: -45deg;
+}
+#page3 #imagecont.imageconttwo .ic#img1{
+    width: 30vw;
+    height: 105vh;
+
+    margin-top: 6vw;
+}
+#page3 #imagecont.imageconttwo .ic#img2{
+    margin-right: 1vw;
+    align-self: flex-start;
+    margin-top: 0;
+
+}
+#page3 #imagecont .circ#circle1 svg{
+    width: 30%;
+}
+#page3 #imagecont .circ#circle1.third{
+    margin-right: 2.5vw;
+    margin-bottom: 2vw;
+    rotate: -90deg;
+}
+#page3 #imagecont.imagecontthree{
+    /* border: 2px solid white; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: end;
+}
+#page3 #imagecont.imagecontthree .ic#img1{
+    margin-top: 0;
+    position: absolute;
+    /* background-color: blue; */
+    left: 5%;
+    top: -20%;
+}
+#page3 #imagecont.imagecontthree .ic#img2{
+    margin-right: 1vw;
+}
+#lastcirccont{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lastcirccont #circ{
+    width: 23vw;
+    height: 23vw;
+    border-radius: 50%;
+    background-color: #FFA63D;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-size: 1.1vw;
+}
+#lastcirccont #circ span{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+/* /* #page3 #imagecont .circ#circle1 .goinbig{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    font-size: 2vw;
+    left: 50%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%) scale(1);
+
+} */
+/*#page3 #imagecont .circ#circle1 .goinbig p{
+    color: black;
+} */
+/* #page3 #imagecont .circ#circle1 i{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+} */
+._canvas_container{
+    z-index: 999999 !important; 
+    pointer-events: none;   
 }
 #page4 .heading{
     position: relative;
@@ -420,7 +581,7 @@ body::-webkit-scrollbar{
     color: transparent;
 }
 #page6{
-    min-height: 132vh;
+    min-height: 102vh;
 }
 .heading#four{
     position: relative;
@@ -497,6 +658,7 @@ body::-webkit-scrollbar{
     width: 70%;
     margin-left: 28.5%;
     margin-top: 3vw;
+    margin-bottom: 3vw;
  }
  #page6 #copy h3{
     font-size: 1.3vw;
