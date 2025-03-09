@@ -84,7 +84,7 @@ body::-webkit-scrollbar{
     }
 }
 #wrapper{
-    background-color: #000000;
+    background-color: #000000;  
     position: relative;
 }
 #cursor{
@@ -209,6 +209,11 @@ body::-webkit-scrollbar{
     text-decoration: none;
     -webkit-text-stroke: 1px white;
     color: transparent;
+}
+#page1 img{
+    position: absolute;
+    width: 16vw;
+    top: 0;
 }
 #page2 #videocont{
     height: 70vh;
