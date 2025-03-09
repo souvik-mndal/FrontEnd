@@ -205,13 +205,13 @@ body::-webkit-scrollbar{
     background-color: transparent;
     /* z-index: 22; */
 }
-#page1 #flag{
+#page1 #hoverimg #flag{
     position: absolute;
     height: 25vw;
     top: 0;
     left: 0;
     opacity: 0;
-    transform: translateX(-50%)  translateY(-50%);
+    transform: translate(-50%,-50%);
     /* display: none; */
 }
 #hero .cont h1 span:hover{

@@ -254,30 +254,34 @@ function page_3_anni(){
     })
 }
 page_3_anni()
-document.addEventListener("mousemove",function(dets){
-    gsap.to("#page1 #flag",{
-        x:dets.x,
-        y:dets.y
-    })
+document.querySelector("#hero").addEventListener("mousemove",function(dets){
+    var hro = document.querySelector("#hero")
+    const rect = hro.getBoundingClientRect();
+        let relativeX = dets.clientX - rect.left;
+        let relativeY = dets.clientY - rect.top;
+        gsap.to("#page1 #hoverimg #flag",{
+            left:relativeX,
+            top:relativeY
+        })
 })
 document.querySelector("#hero span#one").addEventListener("mouseenter",function(){
-    gsap.to("#page1 #flag",{
+    gsap.to("#page1 #hoverimg #flag",{
         opacity:1
     })
 })
 document.querySelector("#hero span#one").addEventListener("mouseleave",function(){
 
-    gsap.to("#page1 #flag",{
+    gsap.to("#page1 #hoverimg #flag",{
         opacity:0
     })
 })
 document.querySelector("#hero span#two").addEventListener("mouseenter",function(){
-    gsap.to("#page1 #flag",{
+    gsap.to("#page1 #hoverimg #flag",{
         opacity:1
     })
 })
 document.querySelector("#hero span#two").addEventListener("mouseleave",function(){
-    gsap.to("#page1 #flag",{
+    gsap.to("#page1 #hoverimg #flag",{
         opacity:0
     })
 })
