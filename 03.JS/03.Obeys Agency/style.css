@@ -205,15 +205,19 @@ body::-webkit-scrollbar{
     background-color: transparent;
     /* z-index: 22; */
 }
+#page1 #flag{
+    position: absolute;
+    height: 25vw;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-50%)  translateY(-50%);
+    /* display: none; */
+}
 #hero .cont h1 span:hover{
     text-decoration: none;
     -webkit-text-stroke: 1px white;
     color: transparent;
-}
-#page1 img{
-    position: absolute;
-    width: 16vw;
-    top: 0;
 }
 #page2 #videocont{
     height: 70vh;

@@ -90,17 +90,6 @@ var load = function(){
     },"-=1.2")
 }
 load()
-var movecrsr = function(){
-    var cursormove = document.querySelector("#wrapper");
-    cursormove.addEventListener("mousemove",function(dets){
-        // console.log(dets.x,dets.y);
-        gsap.to("#cursor",{
-            x:dets.x,
-            y:dets.y
-        })
-    })
-}
-// movecrsr();
 var magnet = function(){
    Shery.makeMagnet("#nav-bar #part1 #one ,#nav-bar #part3 h3" /* Element to target.*/, {
     //Parameters are optional.
@@ -265,3 +254,30 @@ function page_3_anni(){
     })
 }
 page_3_anni()
+document.addEventListener("mousemove",function(dets){
+    gsap.to("#page1 #flag",{
+        x:dets.x,
+        y:dets.y
+    })
+})
+document.querySelector("#hero span#one").addEventListener("mouseenter",function(){
+    gsap.to("#page1 #flag",{
+        opacity:1
+    })
+})
+document.querySelector("#hero span#one").addEventListener("mouseleave",function(){
+
+    gsap.to("#page1 #flag",{
+        opacity:0
+    })
+})
+document.querySelector("#hero span#two").addEventListener("mouseenter",function(){
+    gsap.to("#page1 #flag",{
+        opacity:1
+    })
+})
+document.querySelector("#hero span#two").addEventListener("mouseleave",function(){
+    gsap.to("#page1 #flag",{
+        opacity:0
+    })
+})
