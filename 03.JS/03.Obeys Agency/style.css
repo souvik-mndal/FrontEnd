@@ -710,6 +710,9 @@ body::-webkit-scrollbar{
   font-weight: 400;
 }
   @media (max-width:600px) {
+    #wrapper{
+      background-color: rgb(24, 23, 23);
+    }
       #cursor{
           display: none;
       }
@@ -974,7 +977,7 @@ body::-webkit-scrollbar{
       #page4 #about #inside-abt{
           width: 90vw;
           height: fit-content;
-          background-color: pink;
+          /* background-color: pink; */
           border-bottom: 2px solid white;
           display: flex;
           flex-direction: column;
@@ -986,10 +989,7 @@ body::-webkit-scrollbar{
         /* background-color: green; */
         width: 100%;
       }
-      #page4 #about #inside-abt #part2{
-        background-color: burlywood;
-      }
-      #page4 #about h2{
+      #page4 #about>h2{
           width: 90%;
           font-size: 5.7vw;
           font-weight: 400;
@@ -1017,41 +1017,133 @@ body::-webkit-scrollbar{
           margin-left: 0vw;
           margin-top: 6vw;
       }
+      
       #page4 #about #inside-abt #win{
-          /* display: none; */
-          height: 65vh;
-          width: 90vw;
-          background-color: #3F7DF4;
-          position: relative;
-          top:0%;
-          left: 0%;
-          display: grid;
-          grid-template-rows: repeat(5,1fr);
-          padding: 3vw 3vw 15vw 3vw;
+        height: 65vh;
+        width: 90vw;
+        background-color: #3F7DF4;
+        position: relative;
+        top:0%;
+        left: 0%;
+        display: grid;
+        grid-template-rows: repeat(5,1fr);
+        padding: 3vw 3vw 15vw 3vw;
+        margin-bottom: 12.5vh;
       }
       #page4 #about #inside-abt #win .parts{
-        background-color: rgb(61, 61, 137);
+        /* background-color: rgb(61, 61, 137); */
         border-bottom: 2px solid #ffffff76;
         display: flex;
-        /* justify-content: space-between; */
+        /* justify-content: center; */
         align-items: center;
       }
       #page4 #about #inside-abt #win .parts #part1{
         width: 55%;
         /* background-color: pink; */
+        
       }
       #page4 #about #inside-abt #win .parts #part2{
         width: 45%;
-        
       }
       #page4 #about #inside-abt #win .parts h2{
-        font-size: 1.5vw;
+        font-size: 4.4vw;
         /* background-color: gray; */
         width: 100%;
       }
       #page4 #about #inside-abt #win .parts h3{
-        font-size: .95vw;
+        font-size: 4.4vw;
         width: 100%;
         font-weight: 400;
       }
+      #page5{
+        height: fit-content;
+      }
+      #marque{
+        /* height: 60vh; */
+        /* background-color: rgba(255, 0, 0, 0.473); */
+        margin-top: 10vw;
+        margin-bottom: 18vw;
+      }
+      #marque .mark{
+        /* border: 2px solid white; */
+        display: flex;
+        /* overflow-x: auto; */
+      }
+      #marque .mark h1{
+        font-size: 15vw;
+        /* border: 1px solid white; */
+        flex-shrink: 0;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        line-height: 1;
+        
+      }
+      #page6{
+        min-height: fit-content;
+        /* background-color: rgb(58, 42, 45); */
+      }
+      .heading#four{
+        position: relative;
+      }
+      .heading#four::before{
+        font-size: 5vw;
+        position: absolute;
+        top: -20%;
+        left: 5%;
+        z-index: 3;
+      }
+      #page6 #foots{
+        /* background-color: red; */
+        height: fit-content;
+        width: 90%;
+        margin-left: 5%;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        padding: 5vw 0;
+        /* border-bottom: 1px solid white; */
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(3,fit-content);
+      }
+      #page6 #foots .foot{
+        /* border: 2px solid white; */
+        display: flex;
+        flex-direction: column;
+        gap: 1.8vw;
+        margin-bottom: 7vh;
+
+      }
+      #page6 #foots .foot h2{
+        font-size: 6vw;
+        font-weight: 300;
+        line-height: .95;
+        position: relative;
+      }
+      #page6 #foots .footcont{
+        width: fit-content;
+        /* background-color: sienna; */
+        overflow: hidden;
+      }
+      #page6 #foots #foot1 h2,#page6 #foots #foot3 h2{
+        transition: all .4s linear;
+        /* background-color: red; */
+      }
+      #page6 #foots .foot h4{
+        font-size: 4vw;
+        font-weight: 400;
+        margin-bottom: 1.8vh;
+      }
+      #page6 #copy{
+        /* background-color: red; */
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 5vw;
+        margin-bottom: 0vw;
+      }
+      #page6 #copy h3{
+        font-size: 5.2vw;
+        font-weight: 400;
+      }
+      
    }
