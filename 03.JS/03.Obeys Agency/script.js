@@ -125,38 +125,76 @@ var vidcntl = function(){
         })
     })
     var clickcount=1;
-    vidcont.addEventListener("click",function(){
-        if(clickcount%2===0){
-            vid.pause();
+    if(window.innerWidth > 600){
+        vidcont.addEventListener("click",function(){
+            if(clickcount%2===0){
+                vid.pause();
+                
+                gsap.to("#videocrsr",{
+                    height:"10.2vw",
+                    width:"10.2vw",
+                })
+                vidpause.style.display="none"
+                vidplay.style.display="initial"
+                vidthumb.style.opacity=1
+            }
+            else{
+                vidthumb.style.opacity=0
+                gsap.to("#videocont #pause",{
+                    fontSize:"1.2vw",
+                    duration:.4
+                })
+                gsap.to("#videocrsr",{
+                    height:"4.5vw",
+                    width:"4.5vw",
+                })
+                vidpause.style.display="initial"
+                vidplay.style.display="none"
+                vid.autoplay = true; // Enables autoplay
+                vid.loop = true; // Loops the video
+                vid.muted = false;
+                vid.play();
+            }
+            clickcount++;
             
-            gsap.to("#videocrsr",{
-                height:"10.2vw",
-                width:"10.2vw",
-            })
-            vidpause.style.display="none"
-            vidplay.style.display="initial"
-            vidthumb.style.opacity=1
-        }
-        else{
-            vidthumb.style.opacity=0
-            gsap.to("#videocont #pause",{
-                fontSize:"1.2vw",
-                duration:.4
-            })
-            gsap.to("#videocrsr",{
-                height:"4.5vw",
-                width:"4.5vw",
-            })
-            vidpause.style.display="initial"
-            vidplay.style.display="none"
-            vid.autoplay = true; // Enables autoplay
-            vid.loop = true; // Loops the video
-            vid.muted = false;
-            vid.play();
-        }
-        clickcount++;
-        
-    })
+        })
+    }
+    else{
+        vidcont.addEventListener("click",function(){
+            if(clickcount%2===0){
+                vid.pause();
+                
+                gsap.to("#videocrsr",{
+                    
+                    height:"24.2vw",
+                    width:"24.2vw",
+                })
+                vidpause.style.display="none"
+                vidplay.style.display="initial"
+                vidthumb.style.opacity=1
+            }
+            else{
+                vidthumb.style.opacity=0
+                gsap.to("#videocont #pause",{
+                    fontSize:"4.2vw",
+                    duration:.4
+                })
+                gsap.to("#videocrsr",{
+                    height:"15.2vw",
+                    width:"15.2vw",
+                })
+                vidpause.style.display="initial"
+                vidplay.style.display="none"
+                vid.autoplay = true; // Enables autoplay
+                vid.loop = true; // Loops the video
+                vid.muted = false;
+                vid.play();
+            }
+            clickcount++;
+            
+        })
+    }
+    
 }
 vidcntl();
 document.addEventListener("DOMContentLoaded", function() {
