@@ -710,6 +710,77 @@ body::-webkit-scrollbar{
   font-weight: 400;
 }
   @media (max-width:600px) {
+    #loader{
+      /* display: none; */
+      height: 100vh;
+      width: 100vw;
+      background-color: #0d0d0d;
+      /* background-color: rgb(165, 137, 194); */
+      position: fixed;
+      z-index: 4;
+      padding: 35vh 0 0 5vw;
+      overflow: hidden;
+    }
+    #loader .line{
+      overflow: hidden;
+      /* background-color: green; */
+    }
+    #loader .line:nth-child(1){
+      display: flex;
+      justify-content: space-between;
+      align-items: start ;
+      margin-left: 5vw;
+      width: 45%;
+    }
+    #line1-part1{
+      display: flex;
+      justify-content: space-around;
+      width: 48%;
+      /* background-color: red; */
+    }
+    #line1-part1 #time{
+      /* background-color: rebeccapurple; */
+      width: 40%;
+      text-align: end;
+    }
+    #line1-part1 h3{
+      font-size: 5vw;
+      font-style: italic;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: 100;
+      margin-top: 2.5%;
+    }
+    #loader .line h1{
+      font-size: 8vw;
+      text-transform: uppercase;
+      font-weight: 450;
+      line-height: 1;
+    }
+    #loader .line h1 span{
+      animation-name: spanchange;
+      animation-duration: .7s;
+      animation-delay: 3;
+      animation-iteration-count: 5;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      margin-left: 3.7vw;
+    }
+    @keyframes spanchange {
+      0%{
+          font-family: Roboto;
+          opacity: 1;
+      }
+      50%{
+          opacity: 0;
+      }
+      100%{
+          font-family:'Times New Roman', Times, serif;
+          font-style: italic;
+          -webkit-text-stroke: 1px white;
+          color: transparent;
+          opacity: 1;
+      }
+    }
     #wrapper{
       background-color: rgb(24, 23, 23);
     }
@@ -780,6 +851,8 @@ body::-webkit-scrollbar{
           background-color: #FFA63D;
           left: 50%;
           top: 50%;
+          z-index: 1;
+          /* display: none; */
       }
       #page2 #videocont #videocrsr i{
           font-size: 6.8vw;
