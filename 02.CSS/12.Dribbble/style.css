@@ -190,6 +190,7 @@ html,body{
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 2%;
+
 }
 .card{
     height: 245px;
@@ -198,6 +199,44 @@ html,body{
     /* border: 2px solid black; */
     margin-bottom: 2vw;
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.card #icons{
+    position: absolute;
+    /* background-color: aqua; */
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-right: 1.4vw;
+    gap: 1vw;
+    bottom: 0;
+    z-index: 3;
+    padding-bottom: 1.2vw;
+    opacity: 0;
+}
+.card #icons i{
+    font-size: 1.2vw;
+    background-color: white;
+    padding: .7vw;
+    border-radius: 50%;
+}
+.card::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.626) 0%,rgba(255, 255, 255, 0) 40%);
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    opacity: 0;
+    
+}
+.card:hover::after{
+    opacity: 1;
+}
+.card:hover #icons{
+    opacity: 1;
 }
 .card .card-cont{
     height: 100%;
