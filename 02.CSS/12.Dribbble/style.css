@@ -280,7 +280,40 @@ html,body{
     color: white;
 }
 #movement{
-    height: 28vh;
-    background-color: aqua;
+    /* height: 28vh; */
+    /* background-color: aqua; */
     margin-top: 5.5%;
+    display: flex;
+    gap: 2vw;
+    overflow: hidden;
+
+}
+
+#movement #container{
+    /* background-color: red; */
+    display: flex;
+    flex-shrink: 0;
+    overflow: hidden;
+    gap: 2vw;
+    animation-name: move;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    padding-bottom: 2.5vw ;
+}
+#movement #container img{
+    height: 25vh;
+    border-radius: 10px;
+    margin-bottom: 1.15vw;
+}
+#movement #container p{
+    font-size: 1.1vw;
+}
+@keyframes move {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(calc(-100% - 2vw) );
+    }
 }
