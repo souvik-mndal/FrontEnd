@@ -296,13 +296,13 @@ html,body{
     overflow: hidden;
     gap: 2vw;
     animation-name: move;
-    animation-duration: 15s;
+    animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     padding-bottom: 2.5vw ;
 }
 #movement #container img{
-    height: 25vh;
+    height: 20vh;
     border-radius: 10px;
     margin-bottom: 1.15vw;
 }
@@ -316,4 +316,8 @@ html,body{
     to{
         transform: translateX(calc(-100% - 2vw) );
     }
+}
+#lastnavi{
+    background-color: aqua;
+    /* height: 10vh; */
 }
