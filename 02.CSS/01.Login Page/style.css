@@ -7,15 +7,3 @@ html,body{
     height: 100vh;
     width: 100vw;
 }
-#wrapper{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#form-wrapper{
-    background-color: grey;
-    height: 70vh;
-    width: 50vw;
-}
