@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: "Montserrat", sans-serif;
 }
 html, body {
     height: 100%;
@@ -181,7 +183,8 @@ html, body {
         /* background-color: yellow; */
     }
     #part3 h1{
-        font-size: 17.5vw;
+        font-size: 16.5vw;
+        font-weight: 500;
     }
 
 
@@ -191,6 +194,7 @@ html, body {
     }
     #part4 p{
         font-size: 4vw;
+        font-weight: 500;
     }
 
 
@@ -216,14 +220,14 @@ html, body {
 
 
     #middleArrow{
-        height: 18vw;
-        width: 18vw;
+        height: 17vw;
+        width: 17vw;
         top: 51%;
         left: 51.5%;
         transform: translate(-50%,-50%);
     }
     #middleArrow i{
-        font-size: 16vw;
+        font-size: 14vw;
         transform: rotate(90deg);
     }
 }
