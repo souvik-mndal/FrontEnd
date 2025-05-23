@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+}
+#mainContent{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    padding: 27px;
+}
+#text{
+    /* background-color: red; */
+    padding-right: 20px;
+}
+
+
+#part1{
+    /* background-color: yellow; */
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#part1 #logo{
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+#part1 h3{
+    font-size: 1.07rem;
+    font-weight: 500;
+}
+
+
+#part2{
+    height: 28%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#part2 h3{
+    font-size: 1.07rem;
+    font-weight: 500;
+    text-align: end;
+}
+
+
+#part3{
+    height: 57%;
+}
+#part3 h1{
+    font-size: 6.3rem;
+    font-weight: 500;
+    letter-spacing: -3px;
+    line-height: .9;
+    text-transform: uppercase;
+}
+#part3 h1:nth-child(2){
+    text-align: center;
+}
+#part3 h1:nth-child(4){
+    text-align: end;
+    padding-right: 12.5%;
+}
+
+
+#part4{
+    height: 10%;
+    /* background-color: yellow; */
+}
+#part4 p{
+    font-size: .97rem;
+    font-weight: 500;
+}
+
+
+#video{
+    /* background-color: green; */
+    padding-left: 20px;
+}
+#video #videoContainer{
+    height: 100%;
+    width: 100%;
+    /* background-color: yellow; */
+}
+#video #videoContainer video{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+
+#icons{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: end;
+}
+#icons i{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+
+#middleArrow{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #D2422F;
+    border-radius: 50%;
+    top: 50%;
+    left: 51.5%;
+    transform: translate(-50%,-50%);
+}
+#middleArrow i{
+    color: white;
+    font-size: 4rem;
+    font-weight: 100;
+}
