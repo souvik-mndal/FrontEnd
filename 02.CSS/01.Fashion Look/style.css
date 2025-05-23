@@ -42,7 +42,9 @@ html, body {
     font-size: 1.07rem;
     font-weight: 500;
 }
-
+#part1 i{
+    display: none;
+}
 
 #part2{
     height: 28%;
@@ -97,7 +99,7 @@ html, body {
     /* background-color: yellow; */
 }
 #video #videoContainer video{
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
     width: 100%;
 }
@@ -131,4 +133,97 @@ html, body {
     color: white;
     font-size: 4rem;
     font-weight: 100;
+}
+
+
+@media screen and (max-width:480px){
+    #mainContent{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        padding: 3vw;
+    }
+    #text{
+        /* background-color: red; */
+        padding-right: 0px;
+    }
+
+
+    #part1{
+        /* background-color: yellow; */
+        height: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #part1 #logo{
+        height: 4.2vw;
+        width: 4.2vw;
+    }
+    #part1 h3{
+        display: none;
+    }
+    #part1 i{
+        display: initial;
+        font-size: 6.4vw;
+        font-weight: 500;
+    }
+
+    #part2{
+        display: none;
+    }
+
+
+    #part3{
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* background-color: yellow; */
+    }
+    #part3 h1{
+        font-size: 17.5vw;
+    }
+
+
+    #part4{
+        height: 20%;
+        /* background-color: yellow; */
+    }
+    #part4 p{
+        font-size: 4vw;
+    }
+
+
+    #video{
+        /* background-color: green; */
+        padding-left: 0px;
+    }
+    #video #videoContainer{
+        height: 100%;
+        width: 100%;
+        /* background-color: yellow; */
+    }
+    #video #videoContainer video{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    #icons{
+        display: none;
+    }
+
+
+    #middleArrow{
+        height: 18vw;
+        width: 18vw;
+        top: 51%;
+        left: 51.5%;
+        transform: translate(-50%,-50%);
+    }
+    #middleArrow i{
+        font-size: 16vw;
+        transform: rotate(90deg);
+    }
 }
