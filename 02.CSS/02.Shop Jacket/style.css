@@ -19,7 +19,7 @@ html, body {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: yellow;
+    /* background-color: yellow; */
     padding-right: 3vw;
     gap: 1.8rem;
 }
@@ -39,4 +39,69 @@ html, body {
 #navBar #bagIcon i{
     color: white;
     font-size: 1.1rem;
+}
+
+
+#about1{
+    padding: 35px 0 0 100px;
+    /* background-color: yellow; */
+    height: 220px;
+}
+#about1 h1{
+    font-size: 3.85rem;
+    line-height: 1;
+    font-weight: 400;
+
+}
+
+
+#about2{
+    margin-top: 35px;
+    padding: 0px 70px 0px 100px;
+    /* border-top: 1px solid black; */
+    height: 200px;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+#about2 #part1 p{
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+#about2 #part2{
+    align-self: center;
+}
+#about2 .hovers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 300px;
+    height: 55px;
+    /* background-color: red; */
+    border-top: 2px solid black;
+    cursor: pointer;
+}
+#about2 .hovers p{
+    font-size: 1.15rem;
+    
+}
+#about2 .hovers i{
+    font-size: 1.8rem;
+    visibility: hidden;
+}
+#about2 .hovers:hover i{
+    visibility: visible;
+}
+#about2 .hovers:hover p{
+    text-decoration: underline;
+}
+
+#photo{
+    height: calc(100vh - 200px - 35px - 75px - 220px );
+    background-color: red;
+    background: url(image.png);
+    background-position: 0% 40%;
+    background-size: cover;
 }
