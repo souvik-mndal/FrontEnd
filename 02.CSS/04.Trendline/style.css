@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+}
+#nav1{
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 0 35px;
+}
+#nav11{
+    display: flex;
+}
+#nav11 #c1,#nav11 #c2{
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+#nav12{
+    display: flex;
+    gap: 25px;
+}
+#nav12 h4{
+    font-weight: 500;
+    font-size: .9rem;
+}
+#nav2{
+    /* background-color: yellow; */
+    height: 60px;
+    display: flex;
+    padding: 0 35px;
+    gap: 70px;
+}
+#nav2 h4{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+#headlines{
+    height: 300px;
+    /* background-color: yellow; */
+    display: flex;
+    overflow-x: scroll;
+}
+#headlines::-webkit-scrollbar{
+    background-color: transparent;
+    height: 7px;
+}
+#headlines::-webkit-scrollbar-thumb{
+    background-color: orange;
+}
+.lines{
+    /* background-color: red; */
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding-left: 10%;
+    flex-shrink: 0;
+    /* border: 1px solid black; */
+}
+.lines #part1{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+}
+.lines #part2 h1{
+    font-size: 8.5rem;
+    font-weight: 100;
+    margin-left: 7%;
+}
+.lines #part1 h3{
+    font-size: 1.5rem;
+}
+.lines #part1 p{
+    font-size: 1rem;
+    font-weight: 400;
+}
