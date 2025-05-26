@@ -15,7 +15,6 @@ html, body {
 }
 #nav1{
     display: flex;
-    /* background-color: red; */
     justify-content: space-between;
     height: 80px;
     align-items: center;
