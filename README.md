@@ -84,11 +84,11 @@ This project is a **Tribute Webpage** dedicated to **Dr. A.P.J. Abdul Kalam**, t
 # CSS Folder
 
 
-### Project Description
+## Fashion Look
 
 This is a visually stunning **Fashion Look Landing Page** created using **HTML5 and CSS3**, with integrated video backgrounds and responsive layouts. The webpage captures a high-end editorial aesthetic often seen in fashion websites.
 
-#### Key Features:
+### Key Features:
 
 - Bold typography and split layout design
 - Background video element playing automatically (muted and looped)
@@ -132,3 +132,67 @@ This is a visually stunning **Fashion Look Landing Page** created using **HTML5 
 <a href="https://fashionlook.netlify.app/" target="_blank">👉 FashionLook Project Live Link</a>
 
 ---
+## Shop Jacket
+
+A sleek and stylish product landing page for a **Shop Jacket** concept, inspired by modern e-commerce UI trends. This project uses **HTML5** and **CSS3** to create a clean, functional, and aesthetically minimal interface—ideal for clothing or fashion product showcases.
+
+### Key Features:
+
+- Elegant hero text section introducing the product
+- Clean navbar with cart icon and simplified options
+- Interactive section for:
+  - Add to Cart
+  - Product Details
+  - Shipping Info
+- Smooth hover effects with visible arrow icon on hover
+- Responsive layout (non-flex on mobile screens not yet implemented—could be added)
+
+---
+
+### Output Preview
+
+![Shop Jacket Project Preview](./00.Source/02_CSS_ShopJacket.png)
+
+
+---
+
+### Responsiveness
+
+### Responsiveness
+
+- Designed to work primarily on **desktop screens** with clean layout and spacing  
+- Mobile responsiveness is **not fully implemented** yet  
+- Future improvements may include:  
+  - Collapsing navigation menu into a hamburger icon for small screens  
+  - Adjusting typography sizes for better readability on mobile  
+  - Making interactive sections stack vertically instead of side-by-side  
+  - Ensuring background images resize and reposition smoothly on smaller devices  
+
+---
+
+### External Assets Used
+
+- 🧩 Icons: [Remix Icon](https://remixicon.com/)
+- 📷 Image: `image.png` as product showcase background
+
+---
+
+
+### Live Demo
+
+
+<a href="https://jacket-shoping.netlify.app/" target="_blank">👉 Shop Jacket Project Live Link</a>
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
