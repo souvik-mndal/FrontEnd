@@ -231,6 +231,45 @@ This is a sleek and modern **Cotton Weave Product Landing Page** crafted with **
 ---
 
 
+## TrendLine 
+
+> A smooth and minimal horizontal scroll landing page for a conceptual eyewear brand – **TrendLine**. Inspired by premium brand UI designs.
+
+### Key Features
+
+- Elegant horizontal scroll layout with large typography
+- Fixed navigation menus (top 1 and 2)
+- Smooth product headline transitions
+- Background cover image section
+- Responsive (add media queries for mobile support)
+- Inspired by a Dribbble concept
+
+---
+### Output Preview
+
+![Trendline Project Preview](./00.Source/02_CSS_TrendLine.png)
+---
+## 📱 Responsiveness
+
+🔶 Currently optimized for **desktop view**.
+
+To make it mobile responsive, consider adding the following:
+- Use `@media` queries to adjust layout
+- Stack navigation items vertically
+- Reduce font sizes for `.lines #part2 h1`
+
+You can request the mobile fix code if needed.
+
+---
+
+### Live Demo
+
+
+<a href="https://trendline-dribbble.netlify.app/" target="_blank">👉 Trendline Project Live Link</a>
+
+---
+
+
 
 
 
