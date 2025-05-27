@@ -36,17 +36,49 @@ The resume is designed to be clear and structured for easy readability.
 
 ### Live Demo
 
-You can check out the live webpage by opening the `resume.html` file located inside the `HTML/1.resume` folder in any modern web browser.
 
-Alternatively, if hosted online, access it here:  
-[Resume Project Live Link](https://resume-by-html.netlify.app/) 
+<a href="https://resume-by-html.netlify.app/" target="_blank">👉 Resume Project Live Link</a>
 
 ---
 
-### How to Use
 
-1. Clone or download the project folder.
-2. Open the `resume.html` file in your browser to view the resume.
-3. Customize the content inside the HTML file as per your personal details.
+
+## Tribute Project
+
+### Project Description
+
+This project is a **Tribute Webpage** dedicated to **Dr. A.P.J. Abdul Kalam**, the Missile Man of India and the 11th President of the country. The page includes:
+
+- A title and quote summarizing his legacy
+- Internal navigation links for easy section jumping
+- A profile image linked to a high-resolution version
+- A detailed timeline of his life and contributions
+- A list of motivational quotes
+- An external link to his Wikipedia profile
 
 ---
+
+### Output Preview
+
+![Tribute Project Screenshot](./00.Source/01_HTML_Tribute.png)
+
+*(Click the image for the full-size version)*
+
+---
+
+### Responsiveness
+
+- The webpage is built using basic HTML and minimal inline CSS.
+- It is **partially responsive**:
+  - Works fine on desktops and tablets.
+  - Minor layout issues may appear on smaller mobile devices (e.g., text overflow or image scaling).
+- Can be improved using media queries and flexible layouts for full responsiveness.
+
+---
+
+### Live Demo
+
+<a href="https://tribute-apjkalam.netlify.app/" target="_blank">👉 View Tribute Project Live</a>
+
+---
+
