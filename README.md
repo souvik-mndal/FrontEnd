@@ -72,7 +72,6 @@ This project is a **Tribute Webpage** dedicated to **Dr. A.P.J. Abdul Kalam**, t
 - It is **partially responsive**:
   - Works fine on desktops and tablets.
   - Minor layout issues may appear on smaller mobile devices (e.g., text overflow or image scaling).
-- Can be improved using media queries and flexible layouts for full responsiveness.
 
 ---
 
@@ -81,4 +80,49 @@ This project is a **Tribute Webpage** dedicated to **Dr. A.P.J. Abdul Kalam**, t
 <a href="https://tribute-apjkalam.netlify.app/" target="_blank">👉 View Tribute Project Live</a>
 
 ---
+
+# CSS Folder
+
+
+### Project Description
+
+This is a visually stunning **Fashion Look Landing Page** created using **HTML5 and CSS3**, with integrated video backgrounds and responsive layouts. The webpage captures a high-end editorial aesthetic often seen in fashion websites.
+
+#### Key Features:
+
+- Bold typography and split layout design
+- Background video element playing automatically (muted and looped)
+- Stylized logo using CSS rotation
+- Minimalist menu with icons via [Remix Icon](https://remixicon.com/)
+- Eye-catching central arrow button (animated layout element)
+- Responsive design tailored for mobile screens
+
+---
+
+### Output Preview
+
+![Fashion Look Project Preview](./00.Source/02_CSS_FashionLook.png)
+
+
+---
+
+### Responsiveness
+
+- Designed to adapt to both **desktop and mobile screens**
+- Mobile adjustments include:
+  - Collapsed navigation and replaced with hamburger icon
+  - Resized typography
+  - Video section retains responsiveness
+  - Central arrow reorients for vertical scrolling
+
+---
+
+### External Assets Used
+
+- 🎨 Fonts: [Google Fonts - Montserrat](https://fonts.google.com/specimen/Montserrat)
+- 🧩 Icons: [Remix Icon CDN](https://remixicon.com/)
+- 🎥 Video: `video.mp4` (ensure it's placed in the same directory as `index.html`)
+
+---
+
 
