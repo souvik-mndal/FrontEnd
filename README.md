@@ -126,3 +126,9 @@ This is a visually stunning **Fashion Look Landing Page** created using **HTML5 
 ---
 
 
+### Live Demo
+
+
+<a href="https://fashionlook.netlify.app/" target="_blank">👉 FashionLook Project Live Link</a>
+
+---
