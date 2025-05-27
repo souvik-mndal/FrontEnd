@@ -184,6 +184,52 @@ A sleek and stylish product landing page for a **Shop Jacket** concept, inspired
 
 ---
 
+##  Cotton Weave
+
+This is a sleek and modern **Cotton Weave Product Landing Page** crafted with **HTML5 and CSS3**. The layout evokes a clean, minimal aesthetic suitable for showcasing premium apparel or accessory items.
+
+---
+
+###  Key Features:
+
+- Elegant **split-layout design** with a clear product focus
+- Stylized **"Add to Bag"** CTA within a floating circular container
+- Clean typography with a fashion-forward grid structure
+- Subtle **color palette selector**
+- Integrated **Remix Icons** for star ratings
+
+---
+### Output Preview
+
+![Shop Jacket Project Preview](./00.Source/02_CSS_CottonWeave.png)
+---
+
+###  Responsiveness
+
+- Not Fully responsive and across **mobile screens**
+- For smaller screens:
+  - Grid layout stacks vertically
+  - Font sizes adjust for readability
+  - "Add to Bag" and product image areas reposition smartly
+
+---
+
+### External Assets Used
+
+- 🎨 Fonts: System default sans-serif
+- 🧩 Icons: [Remix Icon CDN](https://remixicon.com/)
+- 🖼️ Image: Product background from [Unsplash](https://unsplash.com/)
+  - [Image Source](https://images.unsplash.com/photo-1623953939152-c551dfdabe99?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+---
+
+### Live Demo
+
+
+<a href="https://weave-cotton.netlify.app/" target="_blank">👉 Cotton Weave Project Live Link</a>
+
+---
+
 
 
 
