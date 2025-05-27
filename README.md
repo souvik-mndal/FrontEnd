@@ -62,7 +62,6 @@ This project is a **Tribute Webpage** dedicated to **Dr. A.P.J. Abdul Kalam**, t
 
 ![Tribute Project Screenshot](./00.Source/01_HTML_Tribute.png)
 
-*(Click the image for the full-size version)*
 
 ---
 
