@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    background-color: #f8f8f8;
+
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+    padding-top: 0.1px;
+}
+#navBar{
+    height: 11vh;
+    /* background-color: yellow; */
+    margin-top: 30px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 0 4vw;
+    display: grid;
+    grid-template-columns: 45% 15% 28% 12%;
+}
+#navBar #part1{
+    display: flex;
+    align-items: center;
+    padding-right: 3vw;
+    justify-content: space-between;
+    border-right: 2px solid black;
+}
+#navBar #part1 h2{
+    font-family: Monument;
+    font-size: 2.25rem;
+    letter-spacing: -4px;
+    /* background-color: red; */
+    position: relative;
+}
+#navBar #part1 h2::after{
+    content: "©";
+    font-family: sans-serif;
+    position: absolute;
+    top: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    right: -20px;
+
+}
+#navBar #part1 h2::before{
+    content: "model management";
+    font-family: sans-serif;
+    position: absolute;
+    bottom: -3px;
+    font-size: .7rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    right: 0px;
+
+}
+#navBar #part1 h4,#navBar #part2 h4,#navBar #part3 h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+#navBar #part4 h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#navBar #part2{
+    display: flex;
+    border-right: 2px solid black;
+    align-items: center;
+    justify-content: center;
+}
+#navBar #part3{
+    display: flex;
+    align-items: center;    
+    border-right: 2px solid black;
+    justify-content: center;
+}
+#navBar #part4{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 3vw;
+}
