@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 3rem;
+    gap: 2rem;
+    /* background-color: aqua; */
+}
+#nav div h3{
+    font-weight: 500;
+    font-size: .9rem;
+}
+#nav div:nth-child(4){
+    padding: .8rem;
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+}
+#nav div i{
+    font-size: 1rem;
+}
+#head-ing{
+    font-family: Helvetica, sans-serif;
+    padding-left: 5vw;
+    padding-top: 2vh;
+    /* background-color: blue; */
+    height: 32vh;
+}
+#head-ing h1{
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 1.1;
+}
+#part{
+    height: 28vh;
+    /* background-color: brown; */
+    padding-left: 5vw;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+#part #part-1 p{
+    font-weight: 500;
+    line-height: 1.5;
+}
+#part #part-2{
+    width: 25vw;
+    padding-top: 30px;
+    padding-right: 4rem;
+    /* background-color: #fff; */
+}
+#part #part-2 p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+#part #part-2 i{
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0;
+}
+#part #part-2 .box:hover i{
+    opacity: 1;
+}
+#part #part-2 .box:hover p{
+    text-decoration: underline;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.2rem;
+    border-top: 2px solid black;
+}
+#image{
+    height: calc(100% - 28vh - 32vh - 10vh);
+    background-image: url(source/image.png);
+    background-position: 0% 47%;
+    background-size: cover;
+}
+@media(max-width:480px){
+    #nav{
+        height: 10vh;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 1rem;
+        gap: .9rem;
+        /* background-color: aqua; */
+    }
+    #nav div h3{
+        font-weight: 500;
+        font-size: .78rem;
+    }
+    #nav div:nth-child(4){
+        padding: .7rem;
+        background-color: black;
+        color: #fff;
+        border-radius: 50%;
+    }
+    #nav div i{
+        font-size: .9rem;
+    }
+    #head-ing{
+        font-family: Helvetica, sans-serif;
+        padding-left: 5vw;
+        padding-top: 2vh;
+        /* background-color: blue; */
+        height: 23vh;
+    }
+    #head-ing h1{
+        font-size: 10vw;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+    #part{
+        height: 37vh;
+        /* background-color: brown; */
+        padding-left: 5vw;
+        padding-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #part #part-1 p{
+        font-size: .8rem;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+    #part #part-2{
+        width: 100%;
+        padding-top: 0px;
+        padding-right: 5vw;
+        /* background-color: #fff; */
+    }
+    #part #part-2 p{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    #part #part-2 i{
+        font-size: 1.2rem;
+        font-weight: 700;
+        opacity: 1;
+    }
+    .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3.2rem;
+        border-top: 2px solid black;
+    }
+    #image{
+        height: calc(100% - 23vh - 37vh - 10vh);
+        background-image: url(source/image.png);
+        background-position: 0% 70%;
+        background-size: cover;
+    }
+}

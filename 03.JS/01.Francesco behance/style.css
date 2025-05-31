@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sulphur Point;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(26, 25, 25);
+}
+#nav-bar{
+    height: 9vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+}
+#nav-bar h3{
+    font-size: 1.2vw;
+}
+#nav-bar #part2{
+    display: flex;
+    justify-content: space-around;
+    gap: 3vw;
+}
+#intro{
+    position: relative;
+    z-index: 1;
+}
+h1{
+    font-size: 10vw;
+    text-transform: uppercase;
+    line-height: .75;
+    font-weight: 500;
+    /* background-color: red; */
+    width: 70%;
+    margin-left: 15%;
+}
+#intro h1:nth-child(1){
+    margin-top: 20vh;
+}
+#intro h1:nth-child(2){
+    text-align: center;
+}
+#intro h1:nth-child(3){
+    text-align: center;
+}
+img{
+    height: 25vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+#image img:nth-child(1){
+    rotate: 20deg;
+    left: 42%;
+}
+#image img:nth-child(2){
+    rotate: 10deg;
+    left: 41%;
+}
+#foot #part1{
+    width: 10%;
+}
+#foot #part3{
+    width: 10%;
+    text-align: end;
+}
+#foot{
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 0 2vw;
+}
+#foot h3{
+    font-size: 1.1vw;
+}
+#foot #part2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
