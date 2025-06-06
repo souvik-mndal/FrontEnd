@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#wrapper{
+    height: 80%;
+    background-color: rgba(93, 96, 95, 0.473);
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#top{
+    height: 16%;
+    text-align: center;
+    /* background-color: red; */
+}
+#top h1{
+    font-size: 2.5rem;
+}
+#top input{
+    width: 30%;
+    height: 40%;
+    border-radius: 10px;
+    border: none;
+    padding: 0 .5rem;
+    font-size: 1.05rem;
+}
+#top #search{
+    height: 40%;
+    padding: 0 1rem;
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+#imageWrap{
+    height: 84%;
+    /* background-color: pink; */
+    overflow-y: auto;
+}
+.card{
+    border-radius: 10px;
+    display: inline-block;
+    margin: 40px 25px;
+    height: 450px;
+    width: 350px;
+    /* background-color: red; */
+    padding: 5px 0;
+}
+.card #pro{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    gap: 15px;
+    font-size: 1.25rem;
+}
+.card #pro #userimg{
+    height:  40px;
+    border-radius: 50%;
+    width : 40px;
+    /* background-color: pink; */
+}
+#actualimg{
+    height: 70%;
+    width: 93%;
+    /* background-color: pink; */
+    margin: auto;
+    margin-top: 15px;
+}
+#desc{
+    margin: 10px 0 0 10px;
+}
