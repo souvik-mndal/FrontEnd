@@ -1,0 +1,257 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e0f2fe, #fef9c3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Main Card */
+#wrapper {
+  width: 70%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Search Header */
+#part1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#heading {
+  display: none;
+}
+
+#profile {
+  padding: 0.8rem 1rem;
+  width: 300px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  transition: 0.3s ease;
+}
+#profile:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+#search {
+  padding: 0.8rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+#search:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Showcase Card */
+#showcase {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Left Side */
+#showcase #part1 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#imageCont {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+#imageCont img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+#desc {
+  font-size: 1rem;
+  color: #475569;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Right Side */
+#showcase #part2 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 2rem;
+}
+
+#socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nums {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1.2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.nums h2 {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.nums h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Visit Button */
+#visit {
+  padding: 0.8rem 1.8rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#visit:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+#socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.nums {
+  min-width: 0;
+  padding: 1.5rem 0.5rem;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.nums h2 {
+  font-size: 1rem;
+  color: #475569;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-bottom: 0.25rem;
+}
+
+.nums h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+/* Loader */
+.loader {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #3b82f6;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  #wrapper {
+    width: 90%;
+    height: auto;
+  }
+  #showcase {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #showcase #part1, #showcase #part2 {
+    width: 100%;
+  }
+  #socials {
+    flex-direction: column;
+  }
+}
