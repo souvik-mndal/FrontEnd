@@ -9,6 +9,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
 }
 #wrapper{
@@ -72,6 +73,12 @@ html, body {
     border-radius: 50%;
     width : 40px;
     /* background-color: pink; */
+    overflow: hidden;
+}
+.card #pro #userimg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 #actualimg{
     height: 70%;
@@ -79,7 +86,16 @@ html, body {
     /* background-color: pink; */
     margin: auto;
     margin-top: 15px;
+    overflow: hidden;
+}
+#actualimg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 #desc{
     margin: 10px 0 0 10px;
+}
+#load{
+    display: none;
 }
