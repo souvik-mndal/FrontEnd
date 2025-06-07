@@ -38,6 +38,8 @@ function display(res){
     // console.log(res.main.humidity);
     let speedd = speed(res.wind.speed);
     document.querySelector("#weather").innerHTML = `<div id="part1" class="parts">
+                <img src="https://openweathermap.org/img/w/${res.weather[0].icon}.png" alt="">
+                <h4>${res.weather[0].description}</h4>
                 <h1 id="deg">${res.main.temp}</h1>
                 <h3 id="place">${res.name}</h3>
             </div>

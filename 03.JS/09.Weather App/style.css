@@ -136,7 +136,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right:1px solid black;
+    /* border-right:1px solid black; */
+    font-size: 2rem;
+}
+#weather #part1 img{
+    height: 115px;
+    object-fit: cover;
 }
 #weather #part1 h1{
     font-size: 4.5rem;
