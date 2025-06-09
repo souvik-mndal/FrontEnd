@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #333;
+}
+
+#wrapper {
+  height: 95%;
+  width: 40%;
+  background: #ffffffcc;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#top h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+#top {
+  min-height: 16%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#top h1 {
+  font-size: 2.5rem;
+  color: #1e1e2f;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 6px 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+#input {
+  flex: 1;
+  height: 45px;
+  border: none;
+  border-radius: 50px;
+  padding: 0 20px;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+  color: #333;
+}
+
+#add {
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6c63ff, #48c6ef);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#add:hover {
+  background: linear-gradient(135deg, #5b55e2, #3fb1dc);
+  transform: scale(1.05);
+}
+#tasks{
+    /* background-color: aqua; */
+    height: 84%;
+    overflow: auto;
+}
+.tsk{
+    /* background-color: red; */
+    display: flex;
+    padding: .85rem 0 .85rem .5rem;
+    margin-top: .75rem;
+    align-items: center;
+    border-radius: 10px;
+    height: auto;
+}
+.tsk:hover{
+    background-color: rgba(128, 128, 128, 0.184);
+}
+.tsk input[type="checkbox"]{
+    /* height: 23px; */
+    margin-right: 10px;
+    /* width: 23px; */
+    
+}
+.tsk .cbtn{
+    font-size: 1.1rem;
+    background-color: rgb(243, 228, 228);
+    padding: 0 .3rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    visibility: hidden;
+}
+.tsk:hover .cbtn{
+    visibility: visible;
+    cursor: pointer;
+    user-select: none;
+}
+.tsk .do{
+    font-size: 1.15rem;
+}
