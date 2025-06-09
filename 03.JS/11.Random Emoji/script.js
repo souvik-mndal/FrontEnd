@@ -6,6 +6,7 @@ let ACCESS_KEY = "5fc5d0fb93231f009fa33fc540190d94f1b07790";
 
 let ji = document.querySelector("#emoji");
 let load = document.querySelectorAll(".loader");
+let desc = document.querySelector("#desc");
 
 function rndm(len){
     return Math.floor(Math.random()*len)
@@ -17,6 +18,7 @@ async function emo(){
     const res = await req.json();
     let r = rndm(res.length)
     ji.innerText = res[r].character;
+    desc.innerText = res[r].unicodeName;
     load[0].style.display = "none";
 }
 
