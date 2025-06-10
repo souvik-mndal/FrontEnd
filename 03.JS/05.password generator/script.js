@@ -1,61 +1,66 @@
-const range = document.querySelector("#range");
-const showRange = document.querySelector("#show-range");
-const capital = document.querySelector("#capital");
-const lower = document.querySelector("#lower");
-const number = document.querySelector("#number");
-const symbol = document.querySelector("#symbol");
-const generate = document.querySelector("#generate");
-const copy = document.querySelector("#copy");
+
+
+
+let range = document.querySelector("#range");
+let showrange = document.querySelector("#show-range");
+let generate = document.querySelector("#generate");
+let capitalL = document.querySelector("#capital");
+let lowerL = document.querySelector("#lower");
+let numberL = document.querySelector("#number");
+let symbolL = document.querySelector("#symbol");
+let h3 = document.querySelector("h3");
+let copy = document.querySelector("#copy");
+
 
 range.addEventListener("input",()=>{
-    showRange.innerText = range.value ;
+    showrange.innerText = range.value;
 })
-let cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let sml = "abcdefghijklmnopqrstuvwxyz";
-let num = "0123456789";
-let sym = "~!@#$%^&*()_-+*/<,>.:;{}[]"
+
+let capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let small = "abcdefghijklmnopqrstuvwxyz";
+let symbol = "@!#$%+-*/&^(){}[]|?<>";
+let number = "0123456789";
+
 let all = "";
 let ans = "";
-function rndm(){
-    return Math.floor(Math.random()*all.length);
+
+function rndm(i){
+    return Math.floor(Math.random()*i);
 }
 
 generate.addEventListener("click",()=>{
-    
-    if(capital.checked === true ){
-        all += cap;
-        console.log(all);
+    if( capitalL.checked === true ){
+        all += capital;
     }
-    if(lower.checked === true ){
-        all += sml;
-        console.log(all);
+    if( lowerL.checked === true ){
+        all += small;
     }
-    if(number.checked === true ){
-        all += num;
-        console.log(all);
+    if( symbolL.checked === true ){
+        all += symbol;
     }
-    if(symbol.checked === true ){
-        all += sym;
-        console.log(all);
+    if( numberL.checked === true ){
+        all += number;
     }
-    if( all === "" ){
-        alert("Choose any one of the options");
+    if( all.length === 0 ){
+        alert("you have to choose atleast one option");
     }
+    console.log(all.length);
     for( let i=0 ; i<range.value ; i++ ){
-        ans += all.charAt(rndm());
+        let rdm = rndm(all.length)
+        ans += all.charAt(rdm);
+        console.log(rdm,ans);
     }
-    document.querySelector("h3").innerText = ans;
+    h3.innerText = ans;
     ans = "";
     all = "";
-
 })
+
 copy.addEventListener("click",()=>{
-    let h = document.querySelector("h3");
-    if( h.innerText === "" ){
-        alert("No charecter found");
+    if( h3.innerText === "" ){
+        alert("Please generate a password first");
     }
-    window.navigator.clipboard.writeText(h.innerText);
-    if( h.innerText !== "" ){
-        alert("Copied to the Clipboard");
+    else{
+        window.navigator.clipboard.writeText(h3.innerText);
+        alert("copied")
     }
 })
