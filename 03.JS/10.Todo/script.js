@@ -1,119 +1,88 @@
+
+
+
+let arr = JSON.parse(localStorage.getItem("todo")) || [];
+
+
 let input = document.querySelector("#input");
-let btn = document.querySelector("#add");
-let c = 0;
-btn.addEventListener("click",()=>{
-    console.log(input.value);
-    // localStorage.setItem(c,input.value);
-    addin( input.value );
-    input.value = "";
-})
-// {
-// function removeDo( i ){
-//     let d = document.getElementById(i);
-//     // console.log(d);
-//     d.remove();
-// }
-// function slash( i ){
-//     let d = document.getElementById(i);
-    
-//     let dd = d.children[2];
-//     // console.log(d.children[0].checked );
-//     if( d.children[0].checked === true ){
-//         dd.style.textDecoration = "line-through";
-//     }
-//     else{
-//         dd.style.textDecoration = "none";
-//     }
-    
-// }
+let add = document.querySelector("#add");
+let tasks = document.querySelector("#tasks");
 
-// function addin( inp ){
-//     let item = document.createElement("div");
-//     item.setAttribute("class","tsk");
-//     item.setAttribute("id", c );
-//     item.innerHTML = `
-//     <input type="checkbox" name="complete" onclick=slash(${c})>
-//     <button class="cbtn" onclick=removeDo(${c}) ><p class="cross">X</p></button>
-    
-//     <p class="do">${inp}</p>
-    
-//     `
-//     document.querySelector("#tasks").append(item);
-//     c++;
-// }
-// }
-
-let arr = JSON.parse(localStorage.getItem("todo"))  || [];
-function todos( ){
-    document.querySelector("#tasks").innerHTML = ``;
-    c=0;
-    arr.map((to)=>{
-        str( to );
-    })
-}
-
-function del(id){
-    arr.splice(id,1);
-    localStorage.setItem("todo",JSON.stringify(arr));
-    console.log(id);
-    if( arr.length === 0 ){
-        c = 0;
+let id = 0;
+function display(){
+    tasks.innerHTML = "";
+    id=0;
+    for( let tdo of arr ){
+        toAdd( tdo.input , tdo.check , id );
+        id++;
     }
-    todos();
 }
 
-function str (inp){
-    let item = document.createElement("div");
-    item.setAttribute("class","tsk");
-    item.setAttribute("id", c );
-    item.innerHTML = `
-    <input type="checkbox" name="complete" >
-    <button class="cbtn" id="${c}" ><p class="cross">X</p></button>
-    
-    <p class="do">${inp.input}</p>
-    `
+function toAdd( inpuu , checkuu , id ){
 
-    let b = item.getElementsByTagName("button");
-    b[0].addEventListener("click",(e)=>{
-        b[0].parentNode.remove();
-        del(e.target.parentNode.id);
-    })  
-    let p = item.getElementsByTagName("input");
-    let t = item.getElementsByClassName("do");
-    if( inp.complete === true ){
-        // t[0].style.textDecoration = "line-through";
-        t[0].style.textDecoration = "line-through";
-        p[0].setAttribute("checked",true);
+    let div = document.createElement("div");
+    div.setAttribute("class","tsk");
+    div.setAttribute("id", id );
+    div.innerHTML = `
+                    <input type="checkbox" name="complete" id="cbox">              
+                    <button class="cbtn"><p class="cross">X</p></button>
+                    <p class="do">${inpuu}</p>`
+    
+    
+    let remove = div.querySelectorAll(".cbtn");
+    let cbox = div.querySelector("#cbox");
+    let doo = div.querySelectorAll(".do");
+    let i = div.id;
+    
+    remove[0].addEventListener("click",(e)=>{
+        e.target.parentNode.parentNode.remove();
+        dell( i );
+    })
+    if( checkuu === true ){
+        cbox.setAttribute("checked",true);
+        doo[0].style.textDecoration = "line-through";
     }
     else{
-        t[0].style.textDecoration = "none"
+        doo[0].style.textDecoration = "none";
     }
-    p[0].addEventListener("click",(e)=>{
-        // console.log(e.target.checked);
-        toggle( e.target.checked , e.target.parentNode.id )
-        let itm = e.target.nextElementSibling.nextElementSibling;
-        if( p[0].checked === true ){
-            itm.style.textDecoration = "line-through";
+    cbox.addEventListener("click",(e)=>{
+        if( cbox.checked === true ){
+            doo[0].style.textDecoration = "line-through";
+            line(e.target.parentNode.id , cbox.checked);
         }
         else{
-            itm.style.textDecoration = "none";
+            doo[0].style.textDecoration = "none";
+            line(e.target.parentNode.id , cbox.checked);
         }
     })
-    
-    document.querySelector("#tasks").append(item);
-    c++;
+    tasks.append(div);
 }
 
-function toggle( value , id ){
-    arr[id].complete = !arr[id].complete;
+function line( iid , value){
+    arr[iid].check = value;
+    console.log(arr[iid]);
     localStorage.setItem("todo",JSON.stringify(arr));
+    // display();
 }
 
-function addin( inp ){
-    arr.push({ input : inp , complete : false });
-    // c++;
+function dell(idd){
+    console.log(idd);
+    arr.splice(idd,1);
     localStorage.setItem("todo",JSON.stringify(arr));
-    todos();
+    display();
 }
 
-todos( )
+add.addEventListener("click",()=>{
+    if( input.value === "" ){
+        alert("empty note");
+        return;
+    }
+    arr.push({"input":input.value,"check":false});
+    console.log(id);
+    toAdd( input.value , false , id);
+    id++;
+    input.value = "";
+    localStorage.setItem("todo",JSON.stringify(arr));
+})
+
+display();
