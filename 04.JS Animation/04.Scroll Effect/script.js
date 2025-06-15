@@ -4,8 +4,9 @@ let currentDirection = null;
       function moveMarquee(direction) {
         if (tween) tween.kill();
 
-        const distance = direction === "right" ? "-100%" : "0%";
         const rotation = direction === "right" ? 180 : 0;
+        const xValue = direction === "right" ? "-100%" : "0%";
+        const fromX = direction === "right" ? "0%" : "-100%";
 
         gsap.to("#image img", {
           rotate: rotation,
@@ -14,9 +15,9 @@ let currentDirection = null;
 
         tween = gsap.fromTo(
           ".in",
-          { x: direction === "right" ? "0%" : "-100%" },
+          { x: fromX },
           {
-            x: distance,
+            x: xValue,
             duration: 5,
             ease: "none",
             repeat: -1,
