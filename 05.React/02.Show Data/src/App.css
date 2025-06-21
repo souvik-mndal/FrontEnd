@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+.bigWrap{
+  /* background-color: pink; */
+  padding: 2rem 5rem;
+}
+.wrap{
+  /* background-color: red; */
+  display: flex;
+  border: 2px solid white;
+  margin-bottom: 1.5rem;
+}
+.desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  font-size: 1.35rem;
+  align-items: start;
+}
