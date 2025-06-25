@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { data } from './utitity/data'
 import { Cards } from './components/Cards'
+import './index.css'
 
 function App() {
   const [ inp , setInp ] = useState("")
@@ -29,14 +30,16 @@ function App() {
 
 
   return (
-    <>
-      <h1>Your Shopping Place...</h1>
-      <input onChange={inputVal} type="text" placeholder='Search your item' autoFocus />
-      <button onClick={set}>Search</button>
-      <div id="wrap" style={{display:"flex" , flexWrap:"wrap", justifyContent:"space-evenly"}}>
+    <div >
+      <h1 className='text-center text-4xl my-4'>Your Shopping Place...</h1>
+      <div className='flex justify-center'>
+        <input className='h-12 w-2/5 rounded-xl pl-3 text-xl border-none outline-none shadow-softgray' onChange={inputVal} type="text" placeholder='Search your item' autoFocus />
+        <button className='shadow-softgray px-3 cursor-pointer mx-4 text-xl rounded-xl hover:bg-sky-100' onClick={set}>Search</button>
+      </div>
+      <div id="wrap" className=' flex flex-wrap justify-evenly pt-10'>
         <Cards data={ dta }/>
       </div>
-    </>
+    </div>
   )
 }
 

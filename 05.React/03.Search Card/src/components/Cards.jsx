@@ -21,17 +21,10 @@ export function Cards({ data }) {
             />
             <div
               id="title"
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                paddingLeft: .5 + "rem",
-                paddingRight: .5 + "rem",
-                fontSize: 1.15 + "rem",
-              }}
+              className=" h-1/5 flex justify-between items-center px-2"
             >
-              <h3>{i.title}</h3>
-              <h2>${i.price}</h2>
+              <h3 className="text-xl leading-none  w-3/5">{i.title}</h3>
+              <h2 className="text-2xl">${i.price}</h2>
             </div>
           </div>;
         });
