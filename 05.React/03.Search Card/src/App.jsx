@@ -37,7 +37,10 @@ function App() {
         <button className='shadow-softgray px-3 cursor-pointer mx-2 text-xl rounded-xl hover:bg-sky-100 sm:h-14  sm:text-xl 2xl:h-12' onClick={set}>Search</button>
       </div>
       <div id="wrap" className=' flex flex-wrap justify-evenly pt-10'>
-        <Cards data={ dta }/>
+        {
+         ( dta.length <= 0 ) ? <h1 className='text-2xl sm:text-3xl'>No Item Found</h1> : <Cards data={ dta }/>
+        }
+        
       </div>
     </div>
   )
