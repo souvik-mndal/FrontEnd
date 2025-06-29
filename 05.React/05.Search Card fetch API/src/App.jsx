@@ -1,24 +1,39 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { data } from './utitity/data'
+// import { data } from './utitity/data'
 import { Cards } from './components/Cards'
 import './index.css'
 
 function App() {
   const [ inp , setInp ] = useState("")
-  const [ dta , setDta ] = useState(data);
+  const [ dta , setDta ] = useState("");
+  const [ initial , setInitial ] = useState("");
+
+
+  async function ftch(){
+    let req = await fetch("https://dummyjson.com/carts");
+    let res = await req.json();
+    console.log(res.carts);
+    setDta( res.carts );
+    setInitial( res.carts );
+  }
+  
+  useEffect(() => {
+    ftch();
+  },[])
+
 
   function inputVal(e){
     if(e.target.value.length === 0 ){
-      setDta(data);
+      setDta(initial);
     }
     setInp(e.target.value);
   }
   function set(){
     let resp = [];
-    data.forEach((item) => {
+    initial.forEach((item) => {
       let match = (item.products).filter((i) => (i.title).toLowerCase().includes(inp.toLowerCase()) )
       if( match.length > 0 ){
         resp.push( {...item , products:match } );
