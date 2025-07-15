@@ -106,9 +106,10 @@ generate.addEventListener("click",(e)=>{
     if( symbol.checked ){
         sum += symbol_val
     }
-    console.log(sum);
-    if( sum === "" ){
+    // console.log(sum);
+    if( sum.length === 0 ){
         h3.innerText = "*Please Select atleast one field*"
+        return
     }
     let ans = "";
     for( let i=0 ; i<slider.value ; i++ ){
