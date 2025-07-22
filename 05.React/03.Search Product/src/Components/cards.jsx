@@ -1,6 +1,5 @@
 
 export function Card({input}){
-    console.log(input);
     return (
         <>
             {input.map((item)=>{

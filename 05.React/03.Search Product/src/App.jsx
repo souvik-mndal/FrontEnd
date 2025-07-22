@@ -6,27 +6,42 @@ import { data } from './Data/ListData'
 function App() {
   let [inp,setInt] = useState("")
   let [list,setList] = useState(data)
-
+  
   function filtering(){
-    console.log("dd");
     let i = data.map((item)=>{  
-      return item.products.filter((innerItem)=>{
-        if( innerItem.title.toLowerCase() == inp.toLowerCase() ){
+      let j = item.products.filter((innerItem)=>{
+        if( innerItem.title.toLowerCase().includes(inp.toLowerCase()) ){
           return innerItem;
         }
       })
+      if( j.length > 0 ){
+        return {...item, products:j}
+      }
+      else{
+        return null
+      }
+    }).filter((ij)=>{
+      if( ij != null ){
+        return ij
+      }
     })
+    console.log("seting data");
     console.log(i);
+    setList(i)
   }
 
   return (
     <>
       <div>
         <h1>Your Shopping App..</h1>
-        <input onChange={(e)=>{setInt(e.target.value)}} type="text" name="searchInput" id="input" />
+        <input onChange={(e)=>{
+            setInt(e.target.value)
+            if(e.target.value === "" ){
+              setList(data)
+            }
+          }} type="text" name="searchInput" id="input" />
         <button onClick={()=>{
             filtering()
-            console.log("sd");
           }}>Search</button>
       </div>
       <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-evenly"}}>
