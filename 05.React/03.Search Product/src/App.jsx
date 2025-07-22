@@ -25,8 +25,6 @@ function App() {
         return ij
       }
     })
-    console.log("seting data");
-    console.log(i);
     setList(i)
   }
 
