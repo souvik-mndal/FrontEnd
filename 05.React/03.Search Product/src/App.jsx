@@ -15,7 +15,7 @@ function App() {
         }
       })
       if( j.length > 0 ){
-        return {...item, products:j}
+        return {...data, products:j}
       }
       else{
         return null
