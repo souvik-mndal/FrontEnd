@@ -36,7 +36,7 @@ export function Body1(){
                     <div onClick={()=>{handleClick("right")}} className="cursor-pointer bg-gray-200 rounded-full ml-2 h-8 w-8 flex justify-center items-center"><i className="ri-arrow-right-line text-xl "></i></div>
                 </div>
             </div>
-            <div className="flex overflow-hidden   pl-6  py-4" ref={parentCard}>
+            <div className="flex overflow-x-scroll custom-scrollbar  pl-6  py-4 cursor-pointer" ref={parentCard}>
                 {cards.map((item)=>{
                     return (<div key={item.id} className="shrink-0 mr-6 ">
                         <img src={`https://media-assets.swiggy.com/swiggy/image/upload/${item.imageId}`} alt="food image " width={144} />
