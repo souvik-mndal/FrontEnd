@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react"
 
 export function Body(){
-    let [data,setData] = useState([])
-    async function fetchData(){
-        let req = await fetch("/api/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=21.99740&lng=79.00110&carousel=true&third_party_vendor=1")
+    // let [dta,setData] = useState([])
+
+    async function fetching(){
+        let req = await fetch("/api/mapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         let res = await req.json()
-        
-        console.log(res?.data?.cards);
+        console.log(res);
     }
 
     useEffect(()=>{
-        fetchData();
+        fetching();
     },[])
-
     return(
         <>
             <div className="w-[80%] bg-slate-500 h-[30%] mx-auto">
