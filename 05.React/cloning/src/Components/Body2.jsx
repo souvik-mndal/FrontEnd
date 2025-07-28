@@ -18,7 +18,7 @@ export function Body2({val}){
     }
     return(
         <>
-        <div className="w-[80%] mx-auto p-4  py-8">
+        <div className="w-[80%] mx-auto p-4  py-8 pb-12 ">
             <div className="flex items-center justify-between pr-6  px-2">
                 <h2 className="text-xl font-extrabold">{data?.header?.title}</h2>
                 <div className="flex">
