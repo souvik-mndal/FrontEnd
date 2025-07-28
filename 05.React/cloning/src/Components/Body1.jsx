@@ -1,23 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
-export function Body1(){
-    let [data,setData] = useState([])
-    let [cards,setCards] = useState([])
+export function Body1({val}){
+    let data = val?.card?.card;
+    let cards = val?.card?.card?.gridElements?.infoWithStyle?.info || [];
     let parentCard = useRef("")
-    async function fetching(){
-        let req = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.56430&lng=88.36930&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
-        let res = await req.json();
-        // console.log(res);
-        // console.log(res?.data?.cards[0]?.card);
-        setData(res?.data?.cards[0]?.card?.card)
-        setCards(res?.data?.cards[0]?.card?.card?.imageGridCards?.info)
-    }
-    useEffect(()=>{
-        fetching();
-    },[])
     // console.log(cards);
-    // console.log(data?.header?.title);
-    // console.log(parentCard.current);
     function handleClick(direction){
         if( direction === "left" ){
             parentCard.current.scrollBy({ left: -672, behavior: 'smooth' })
@@ -38,9 +25,11 @@ export function Body1(){
             </div>
             <div className="flex overflow-x-scroll custom-scrollbar  pl-6  py-4 cursor-pointer" ref={parentCard}>
                 {cards.map((item)=>{
-                    return (<div key={item.id} className="shrink-0 mr-6 ">
+                    return (
+                        <div key={item.id} className="shrink-0 mr-6 ">
                         <img src={`https://media-assets.swiggy.com/swiggy/image/upload/${item.imageId}`} alt="food image " width={144} />
-                    </div>)
+                        </div>
+                    )
                 })}
             </div>
         </div>
