@@ -1,16 +1,25 @@
 import {Link} from 'react-router-dom'
 export function Card({item}){
-    // console.log(item.info.id);
     // console.log(item);
+    // console.log("Props received:", {item, title});
     // console.log(item.cta.link.split("https://www.swiggy.com/")[1]);
     let headerText ;
     let subHeaderText ;
     if( (item?.info?.aggregatedDiscountInfoV3) ){
         if( (item?.info?.aggregatedDiscountInfoV3.header) ){
-            headerText = (item?.info?.aggregatedDiscountInfoV3.header);
+            headerText = (item?.info?.aggregatedDiscountInfoV3?.header);
+        }
+        else{
+            headerText = " ";
         }
         if( (item?.info?.aggregatedDiscountInfoV3.subHeader) ){
-            subHeaderText = (item?.info?.aggregatedDiscountInfoV3.subHeader);
+            subHeaderText = (item?.info?.aggregatedDiscountInfoV3?.subHeader);
+        }
+        else if( (item?.info?.aggregatedDiscountInfoV3.discountTag) ){
+            subHeaderText = (item?.info?.aggregatedDiscountInfoV3?.discountTag);
+        }
+        else{
+            subHeaderText = " "
         }
     }
     else{

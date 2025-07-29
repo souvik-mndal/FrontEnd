@@ -20,7 +20,7 @@ function App() {
   useEffect(()=>{
     fetching();
   },[])  
-  // console.log(data);
+  // console.log(body2Head,body3Head);
   return (
     <>
       <NavBar />
@@ -32,7 +32,7 @@ function App() {
             <Body3 val={body2Data} />
           </>
         } />
-        <Route path="/restaurants/:id" element={<Restrnt />} />
+          <Route path="/restaurants/:id" element={<Restrnt />} />
       </Routes>
     </>
       
