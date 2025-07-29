@@ -26,7 +26,7 @@ export function Body2({val}){
                     <div onClick={()=>{handleClick("right")}} className="cursor-pointer bg-gray-200 rounded-full ml-2 h-8 w-8 flex justify-center items-center"><i className="ri-arrow-right-line text-xl "></i></div>
                 </div>
             </div>
-            <div className="flex overflow-x-scroll custom-scrollbar  px-2  py-4" ref={parentCard}>
+            <div className="flex overflow-x-scroll scroll-container  px-2  py-4" ref={parentCard}>
                 {cards.map((items,i)=>{
                     return <Card key={i} item={items}/>
                 })}

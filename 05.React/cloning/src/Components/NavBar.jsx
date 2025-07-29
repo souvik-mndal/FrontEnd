@@ -1,4 +1,4 @@
-import {Outlet} from 'react-router-dom'
+import {Outlet , Link} from 'react-router-dom'
 export function NavBar(){
     let navItem = [
         {
@@ -37,7 +37,9 @@ export function NavBar(){
         <div className="w-full shadow-md h-[80px] ">
             <div className="w-[1200px] h-full mx-auto flex items-center  justify-between ">
                 <div id="part1" className="flex items-center ">
-                    <img src="https://static.vecteezy.com/system/resources/previews/050/816/833/non_2x/swiggy-transparent-icon-free-png.png" alt="Logo" className="h-[80px]"/>
+                    <Link to="/">
+                        <img src="https://static.vecteezy.com/system/resources/previews/050/816/833/non_2x/swiggy-transparent-icon-free-png.png" alt="Logo" className="h-[80px]"/>
+                    </Link>
                     <div className="flex items-center ml-8 cursor-pointer">
                         <h3 className="font-bold text-sm border-b-2 border-gray-700 text-gray-700  hover:text-[#FF5622] hover:border-[#FF5622] ">Order</h3>
                         <i className="ri-arrow-down-s-line ml-4 text-[#FF5622] text-2xl"></i>

@@ -5,6 +5,7 @@ import { Body2 } from './Components/Body2'
 import { Body3 } from './Components/Body3'
 import { useEffect, useState } from 'react'
 import {Routes , Route} from 'react-router-dom'
+import Restrnt from './Components/Restrnt'
 Body2
 function App() {
   let [ body1Data , setBody1Data ] = useState([])
@@ -21,20 +22,19 @@ function App() {
   },[])  
   // console.log(data);
   return (
-    <Routes>
+    <>
+      <NavBar />
+      <Routes>
         <Route path="/" element={
           <>
-            <NavBar></NavBar>
-            <Body1 val={body1Data}></Body1>
-            <Body2 val={body2Data}/> 
-            <Body3 val={body2Data}/>
+            <Body1 val={body1Data} />
+            <Body2 val={body2Data} />
+            <Body3 val={body2Data} />
           </>
-          } />
-        
-        
-        
-        
-    </Routes>
+        } />
+        <Route path="/restaurants/:id" element={<Restrnt />} />
+      </Routes>
+    </>
       
   )
 }

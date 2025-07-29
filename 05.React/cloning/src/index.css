@@ -151,12 +151,22 @@
 }
 
 
-/* Custom class to hide scrollbar */
-.custom-scrollbar {
-  -ms-overflow-style: none;  /* IE 10+ */
-  scrollbar-width: none;     /* Firefox */
+
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-item {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
