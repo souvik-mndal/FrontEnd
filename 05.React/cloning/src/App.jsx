@@ -6,7 +6,7 @@ import { Body3 } from './Components/Body3'
 import { useEffect, useState } from 'react'
 import {Routes , Route} from 'react-router-dom'
 import Restrnt from './Components/Restrnt'
-Body2
+
 function App() {
   let [ body1Data , setBody1Data ] = useState([])
   let [ body2Data , setBody2Data ] = useState([])
