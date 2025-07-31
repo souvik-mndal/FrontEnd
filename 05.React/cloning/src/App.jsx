@@ -22,19 +22,21 @@ function App() {
   },[])  
   // console.log(body2Head,body3Head);
   return (
-    <>
+    <div className=''>
       <NavBar />
-      <Routes>
-        <Route path="/" element={
-          <>
-            <Body1 val={body1Data} />
-            <Body2 val={body2Data} />
-            <Body3 val={body2Data} />
-          </>
-        } />
+      <div className="w-full">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Body1 val={body1Data} />
+              <Body2 val={body2Data} />
+              <Body3 val={body2Data} />
+            </>
+          } />
           <Route path="/restaurants/:id" element={<Restrnt />} />
-      </Routes>
-    </>
+        </Routes>
+      </div>
+    </div>
       
   )
 }

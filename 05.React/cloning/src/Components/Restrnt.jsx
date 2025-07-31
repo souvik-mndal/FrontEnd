@@ -154,7 +154,7 @@ function Restrnt() {
       {/* https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/TopPicks/ShCB1 */}
       {
         (actualTopPicks?.carousel.length > 0) &&
-        <div className=' w-[800px] mx-auto px-2 mt-3  mb-3'>
+        <div className=' w-[800px] mx-auto px-2 mt-3  mb-5'>
         <div className="flex items-center justify-between pr-2 px-2">
             <h2 className="text-xl font-bold">{actualTopPicks?.title}</h2>
             <div className="flex">
