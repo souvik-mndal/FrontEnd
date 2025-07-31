@@ -22,7 +22,12 @@ function App() {
   },[])  
   // console.log(body2Head,body3Head);
   return (
-    <div className=''>
+    <div className='relative'>
+      {/* <div className='h-screen w-screen bg-black/65 z-50 top-0 left-0 absolute'>
+        <div className='h-full w-[37.5%] bg-white'>
+          
+        </div>
+      </div> */}
       <NavBar />
       <div className="w-full">
         <Routes>

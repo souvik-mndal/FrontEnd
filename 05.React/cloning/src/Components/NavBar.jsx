@@ -35,7 +35,8 @@ export function NavBar(){
         },
     ]
     return(
-    
+        <>
+            
             <div className={`${isSticky ? 'sticky top-0 z-40' : 'relative'} w-full shadow-md h-[80px] bg-white`}>
                 <div className="w-[1200px] h-full mx-auto flex items-center  justify-between ">
                     <div id="part1" className="flex items-center ">
@@ -63,6 +64,7 @@ export function NavBar(){
                     </div>
                 </div>
             </div>
+        </>
         
     )
 }
