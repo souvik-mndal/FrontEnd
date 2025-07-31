@@ -265,7 +265,7 @@ function MenuCard({ card }) {
 }
 
 function InnerMenuCard({ card }) {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const arrow = toggle ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line";
 
   const toggleHandler = () => setToggle((prev) => !prev);
