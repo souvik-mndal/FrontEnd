@@ -3,17 +3,26 @@ import {Outlet , Link , useLocation} from 'react-router-dom'
 export function NavBar(){
     const location = useLocation();
     const isSticky = location.pathname === '/';
-    const [ sidebar , useSidebar ] = useState()
+    const [ sidebar , useSidebar ] = useState(false)
     function side(){
+        useSidebar(!sidebar)
         console.log("sjdfdsk");
     }
     return(
-        <div className=' relative'>
-            {/* <div className='w-full h-screen z-50 bg-black/70 absolute top-0 left-0'>
-                <div className='w-[38%] h-screen bg-white'>
+        <div className=' relative '>
+            {
+            ( sidebar ) &&
+                <div  className='w-full h-screen z-50 bg-black/70 absolute top-0 left-0 flex '>
+                    <div className='w-[38%] h-screen bg-white'>
 
+                    </div>
+                    <div onClick={()=>{
+                        side()
+                    }} className='w-[62%] h-screen bg-transparent'>
+
+                    </div>
                 </div>
-            </div> */}
+            }
             <div className={`${isSticky ? 'sticky top-0 z-40' : 'relative'} w-full shadow-md h-[80px] bg-white`}>
                 <div className="w-[1200px] h-full mx-auto flex items-center  justify-between ">
                 <div id="part1" className="flex items-center ">
