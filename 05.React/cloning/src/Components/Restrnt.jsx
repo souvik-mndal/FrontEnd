@@ -39,7 +39,7 @@ function Restrnt() {
 
   let topPicMenu = restrntFood.filter((itm) => itm?.card?.card?.carousel);
   let actualTopPicks = topPicMenu[0]?.card?.card
-  console.log(actualTopPicks);
+  // console.log(actualTopPicks);
   function handleClickDeals(direction) {
     if (!parentCardDeals.current) return;
     if (direction === "left") {
@@ -167,18 +167,42 @@ function Restrnt() {
             </div>
           </div>
         <div className="flex overflow-x-scroll scroll-container py-4 cursor-pointer" ref={parentCardPicks}>
-            {actualTopPicks?.carousel.map((vals, i) => (
-              
+            {actualTopPicks?.carousel.map((vals, i) => {
+                // console.log(vals?.dish?.info?.price , vals?.dish?.info?.finalPrice)
+                // console.log(vals?.dish?.info);
+                let oldPrice = vals?.dish?.info?.price || vals?.dish?.info?.defaultPrice
+                let newPrice = vals?.dish?.info?.finalPrice
+                // console.log(oldPrice,newPrice);
+                return(
 
-                <div key={i} className='w-[40%] h-[310px]  ml-3 rounded-2xl border border-gray-300 flex-shrink-0 flex items-center overflow-hidden'>
-                  <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/${vals?.creativeId}`} className='w-full h-full object-cover' alt="Deal" />
-                  {/* <div>
-                    <h3 className='text-lg capitalize font-extrabold'>{vals?.info?.header}</h3>
-                    <h3 className='text-sm capitalize font-bold text-gray-400'>{vals?.info?.description}</h3>
-                  </div> */}
-                </div>
-              
-            ))}
+                  <div key={i} className='w-[40%] h-[310px]  ml-3 rounded-2xl border border-gray-300 flex-shrink-0 flex items-center overflow-hidden relative'>
+                    <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/${vals?.creativeId}`} className='w-full h-full object-cover' alt="Deal" />
+                    <div className='absolute left-0 bottom-0 flex w-full items-center justify-between h-[20%] px-3'>
+                      <div className='pb-3'>
+                        {
+                          
+                          <>
+                            {(newPrice) ? 
+                            <h3 className='text-base  font-bold text-white line-through'>{"₹"+oldPrice/100}</h3>
+                            :
+                            <h3 className='text-base  font-bold text-white '>{"₹"+oldPrice/100}</h3>}
+                            <h3 className='text-base capitalize font-bold text-white '>
+                              {
+                                ( newPrice ) ? "₹"+newPrice/100 : null
+                              }
+                            </h3>
+                          </>
+                        }
+                        
+                      </div>
+                      <button className=' rounded-lg text-lg w-[37.5%] py-[5px] font-bold text-green-600 border border-gray-200  bg-white'>
+                        ADD
+                      </button>
+                    </div>
+                  </div>
+                
+                )
+              })}
           </div>
       </div>
       }
