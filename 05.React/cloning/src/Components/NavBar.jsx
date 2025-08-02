@@ -1,14 +1,49 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import {Outlet , Link , useLocation} from 'react-router-dom'
+import { Coordinates } from './ContextAPI';
 // https://www.swiggy.com/dapi/misc/place-autocomplete?input=mumbai&types=
+
+
+
 export function NavBar(){
     const location = useLocation();
     const isSticky = location.pathname === '/';
     const [ sidebar , useSidebar ] = useState(false)
+    const [ searchh , useSearchh ] = useState({placeText:""})
+    const [ place , setPlace ] = useState([])
+    const [ ordr , setOrder ] = useState("")
+    const [coor, setCoor] = useContext(Coordinates);
+
     function side(){
         useSidebar(!sidebar)
     }
-    console.log(sidebar);
+    function inp(e){
+        useSearchh((prev)=>{
+            return ({...prev,placeText:e.target.value})
+        })
+        if(e.target.value.length >=3 ){
+            searchAPI(e.target.value)
+        }
+        else{
+            searchAPI(" ")
+        }
+    }
+    async function searchAPI(inpval){
+        let res = await fetch(`https://www.swiggy.com/dapi/misc/place-autocomplete?input=${inpval}&types=`)
+        let req = await res.json() ;
+        setPlace(req?.data || []);
+        // console.log(req);
+    }
+    async function longLat(inpval){
+        let res = await fetch(`https://www.swiggy.com/dapi/misc/address-recommend?place_id=${inpval}`)
+        let req = await res.json() ;
+        // console.log(req?.data[0]?.formatted_address);
+        setOrder(req?.data[0]?.formatted_address);
+        // console.log(req?.data[0]?.geometry?.location?.lat,req?.data[0]?.geometry?.location?.lng);
+        setCoor({lat:req?.data[0]?.geometry?.location?.lat,lng:req?.data[0]?.geometry?.location?.lng})
+    }
+    // console.log(searchh.placeText);
+    
     return(
         <div className={`${sidebar ? 'max-h-screen overflow-hidden' : ''} relative `}>
                 <div className={`w-full h-screen z-50 bg-black/70 absolute top-0 left-0 flex transition-all duration-300 
@@ -16,16 +51,44 @@ export function NavBar(){
                 <div className='w-full h-full relative'>
                     <div className={`w-[38%] h-screen absolute bg-white transform transition-transform duration-500 ease-in-out
                         ${sidebar ? 'translate-x-0' : '-translate-x-full'}`}>
-                        <div className='pl-[30%] pt-[5%] flex flex-col gap-6 '>
+                        <div className='pl-[30%] pt-[5%] flex flex-col gap-0 '>
                             <i onClick={()=>{side()}} className="ri-close-large-fill text-gray-500 text-xl cursor-pointer"></i>
-                            <input className='border-2 font-semibold text-base  w-[85%] outline-none pl-4 py-3 ' type="text" name='placeText' placeholder='Search for area, street name..' />
-                            <div className='border-[2px] flex w-[85%] py-4 pl-3 gap-2 cursor-pointer'>
+
+
+                            <input onChange={inp} value={searchh.placeText} className='border-2 font-semibold text-base  w-[85%] outline-none pl-4 py-3 my-8' type="text" name='placeText' placeholder='Search for area, street name..' autoComplete='off' />
+
+                            <div className=' w-[100%] pl-0 '>
+                                {
+                                    place.map((p,i) => {
+                                        // console.log(p);
+                                        return (
+                                            <div onClick={()=>{
+                                                longLat(p.place_id)
+                                                side()
+                                            }}
+                                                key={i}
+                                                    className={`flex w-[85%] py-5 pl-3 gap-2 cursor-pointer border-b-[2px] border-dashed`}>
+                                                <i className="ri-map-pin-2-line text-gray-500 text-lg"></i>
+                                                <span>
+                                                    <h3 className='font-bold'>{p.structured_formatting.main_text}</h3>
+                                                    <h4 className='text-xs text-gray-500 font-medium'>{p.structured_formatting.secondary_text}</h4>
+                                                </span>
+                                            </div> 
+                                        )
+                                    })
+                                }
+
+                            </div>
+
+                            {
+                                (searchh.placeText.length < 3)&& 
+                                <div className='border-[2px] flex w-[85%] py-4 pl-3 gap-2 cursor-pointer'>
                                 <i className="ri-crosshair-2-line text-gray-500 text-lg"></i>
                                 <span className=''>
                                     <h3 className='font-bold'>Get current location</h3>
                                     <h4 className='text-xs text-gray-500 font-medium'>Using GPS</h4>
                                 </span>
-                            </div>
+                            </div>}
                         </div>
                     </div>
                     <div onClick={side} 
@@ -38,7 +101,13 @@ export function NavBar(){
                 <div id="part1" className="flex items-center ">
                     <img src="https://static.vecteezy.com/system/resources/previews/050/816/833/non_2x/swiggy-transparent-icon-free-png.png" alt="Logo" className="h-[80px] hover:scale-110 duration-100 cursor-pointer"/>
                     <div onClick={()=>{side()}} className="flex items-center ml-8 cursor-pointer ">
-                        <h3  className=" font-bold text-sm border-b-2 border-black  hover:text-[#FF5622] hover:border-[#FF5622] ">Order</h3>
+                        <h3 className="font-bold text-sm group">
+                            <span className="border-black border-b-2 group-hover:text-[#FF5622] group-hover:border-[#FF5622] transition-colors duration-200">
+                                Order
+                            </span>
+                            <span className="font-semibold text-sm border-0 ml-2">{ordr}</span>
+                        </h3>
+                        
                         <i className="ri-arrow-down-s-line ml-4 text-[#FF5622] text-2xl"></i>
                     </div>
                 </div>

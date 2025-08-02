@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Coordinates } from './ContextAPI';
 
 function Restrnt() {
   let parentCardDeals = useRef(null);
@@ -12,10 +13,11 @@ function Restrnt() {
   let [error, setError] = useState(null);
 
   let mainId = id?.split("rest")[1];
-
+  let [coor,setCoor] = useContext(Coordinates)
+  // console.log(coor);
   async function fetc() {
     try {
-      let req = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.56430&lng=88.36930&restaurantId=${mainId}&catalog_qa=undefined&submitAction=ENTER`);
+      let req = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${coor.lat}&lng=${coor.lng}&restaurantId=${mainId}&catalog_qa=undefined&submitAction=ENTER`);
       if (!req.ok) throw new Error(`HTTP error! status: ${req.status}`);
       let res = await req.json();
 
