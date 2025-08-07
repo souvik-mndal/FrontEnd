@@ -35,7 +35,13 @@ function Home() {
           <Body1 val={body1Data} />
           <Body2 val={body2Data} />
           <Body3 val={body2Data} title={body3Head}/>
-        </> : <><h1>Not present</h1></>}
+        </> : 
+        <div className=' flex flex-col justify-center items-center py-[90px] '>
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_476,h_476/portal/m/location_unserviceable.png" alt="not found" className='h-[238px]'/>
+          <h2 className='font-bold text-xl mt-10'>Location Unserviceable</h2>
+          <p className='w-[20%] text-center font-medium text-black/75'>We don’t have any services here till now. Try changing location.</p>
+        </div>
+        }
           
         
 
