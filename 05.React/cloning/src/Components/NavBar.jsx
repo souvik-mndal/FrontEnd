@@ -38,12 +38,13 @@ export function NavBar(){
         let res = await fetch(`https://www.swiggy.com/dapi/misc/address-recommend?place_id=${inpval}`)
         let req = await res.json() ;
         // console.log(req?.data[0]?.formatted_address);
+        // console.log(req);
         setOrder(req?.data[0]?.formatted_address);
         // console.log(req?.data[0]?.geometry?.location?.lat,req?.data[0]?.geometry?.location?.lng);
         setCoor({lat:req?.data[0]?.geometry?.location?.lat,lng:req?.data[0]?.geometry?.location?.lng})
     }
     // console.log(searchh.placeText);
-    
+    // console.log(ordr);
     return(
         <div className={`${sidebar ? 'max-h-screen overflow-hidden' : ''} relative `}>
                 <div className={`w-full h-screen z-50 bg-black/70 absolute top-0 left-0 flex transition-all duration-300 
@@ -101,14 +102,14 @@ export function NavBar(){
                 <div id="part1" className="flex items-center ">
                     <img src="https://static.vecteezy.com/system/resources/previews/050/816/833/non_2x/swiggy-transparent-icon-free-png.png" alt="Logo" className="h-[80px] hover:scale-110 duration-100 cursor-pointer"/>
                     <div onClick={()=>{side()}} className="flex items-center ml-8 cursor-pointer ">
-                        <h3 className="font-bold text-sm group">
+                        <h3 className="font-bold text-sm group flex">
                             <span className="border-black border-b-2 group-hover:text-[#FF5622] group-hover:border-[#FF5622] transition-colors duration-200">
                                 Order
                             </span>
-                            <span className="font-semibold text-sm border-0 ml-2">{ordr}</span>
+                            <span className={`font-semibold text-sm border-0 ml-2 text-black/60 line-clamp-1 ${ordr ? 'w-[160px]' : 'w-[0px]'}`}>{ordr}</span>
                         </h3>
                         
-                        <i className="ri-arrow-down-s-line ml-4 text-[#FF5622] text-2xl"></i>
+                        <i className="ri-arrow-down-s-line ml-0 text-[#FF5622] text-2xl"></i>
                     </div>
                 </div>
                 <div id="part2" className="flex items-center h-full w-[63%] justify-between ">
